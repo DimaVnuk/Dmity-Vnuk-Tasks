@@ -41,3 +41,9 @@ I am also fond of reading books, playing the guitar and watching good films.
 Currently, my dream is to master several programming languages and get a job at EPAM.
 -
 <br/>
+
+
+`And of course ... I love markdown`
+--
+
+<img src="https://media.giphy.com/media/MM0Jrc8BHKx3y/giphy.gif" width="100%">
