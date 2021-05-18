@@ -24,3 +24,20 @@
 
 
 <p align="center"><img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy-downsized.gif" width="100%"></p>
+
+
+---
+
+I have been programming for one year, studying at the Step Academy, during this time I have mastered `HTML, CSS, SASS, BEM, JS`. 
+-
+
+***[An example of my first project `POOL` can be seen at the link](https://dimavnuk.github.io/)***
+---
+
+***[An example of my project `Mortal Kombat` can be seen at the link](https://dimavnuk.github.io/fightingForTelegramProject/)***
+---
+
+I am also fond of reading books, playing the guitar and watching good films.
+Currently, my dream is to master several programming languages and get a job at EPAM.
+-
+<br/>
