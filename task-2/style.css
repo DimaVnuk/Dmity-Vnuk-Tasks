@@ -1,71 +1,81 @@
-html{
+html {
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
     background: #F7F8F9;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header-form-cont_bg-light-green{
+.header-form-cont_bg-light-green {
     background: #F7F8F9;
 }
-.header-form-cont__image-people{
+
+.header-form-cont__image-people {
     border: 1px solid #000;
     background-image: url("./image/imgpsh_fullsize.jpg");
     background-size: contain;
-   width: 500px;
+    width: 500px;
     height: 500px;
 }
 
-.title_color-red-position-center{
+.title_color-red-position-center {
     color: #FD5353;
     text-align: center;
     font-size: 2rem;
     padding-top: 60px;
-    
 }
-.form-create-acc_wrapper{
+
+.form-create-acc_wrapper {
     border: 1px solid #000;
     width: 500px;
     font-weight: 600;
-   
 }
 
-.header-form-cont_wrapper{
+.header-form-cont_wrapper {
     display: flex;
-   justify-content: center;
-   margin-top: 200px;
+    justify-content: center;
+    margin-top: 200px;
 }
-.social-net_wrapper{
+
+.social-net_wrapper {
     display: flex;
-    margin:40px 145px;
+    margin: 30px 145px;
 }
-.fa-size{
-border: 1px solid #000;
-border-radius:15px ;
-width:30px;
-height: 30px;
-text-align: center;
-padding-top: 6px;
-margin: 0 10px 0 12px;
+
+.fa-size {
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 6px;
+    margin: 0 10px 0 12px;
 }
-.sub-title_wrapper{
+
+.sub-title_wrapper {
     text-align: center;
     font-size: 0.8rem;
     font-weight: 100;
 }
+
 .input-for-email-name-password_wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+display: flex;
+justify-content: center;
 margin-top: 20px;
-    
 }
 
-.form{
-
+.registration{
+    width: 380px;
+    height: 45px;
+    margin: 0 20px 15px 20px;
+    background-color: #F7F8F9;
+    border: #DAE5EA 2px solid;
+    border-radius:10px;
+    padding: 15px;
 }
+
+
