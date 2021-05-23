@@ -19,7 +19,7 @@ html {
     background-image: url("./image/imgpsh_fullsize.jpg");
     background-size: contain;
     width: 500px;
-    height: 500px;
+    height: 600px;
 }
 
 .title_color-red-position-center {
@@ -33,6 +33,7 @@ html {
     border: 1px solid #000;
     width: 500px;
     font-weight: 600;
+    height: 600px;
 }
 
 .header-form-cont_wrapper {
@@ -98,23 +99,28 @@ margin-top: 20px;
 }
 
 .button-sign{
-    width: 150px;
-    height:40px;
+    width: 180px;
+    height:50px;
     margin: 20px 10px 0 10px;
-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .input-button_wrapper{
     display: flex;
     justify-content: center;
+    margin: 20px 0 0 0;
 }
 
 .button-sign_bg-color-orange{
     background-color: #FD5353;
     border: none;
+    color: white;
 }
 
 .button-sign_bg-color-white{
     background-color: white;
     border: 2px #FD5353 solid;
+    color: #FD5353;
 }
