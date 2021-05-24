@@ -39,20 +39,39 @@
                     <form class="form-create-acc__input-registration input-registration">
                         <div class="input-registration__name-input">
                             <input class="registration" type="text" placeholder="Name">
+                            <i class="fas fa-user fa-wrapper-color-oranged"></i>
                         </div>
                         <div class="input-registration__email-input">
                             <input class="registration" type="email" placeholder="Email">
+                            <i class="fas fa-envelope fa-wrapper-color-oranged"></i>
                         </div>
                         <div class="input-registration__password-input">
                             <input class="registration" type="text" placeholder="Password">
+                            <i class="fas fa-unlock fa-wrapper-color-oranged"></i>
                         </div>
                         <label class="label label_font-size option" for="check"/>
-                        <input class="registration-i-agee" type="checkbox" id="check" checked />
+                        <input
+                            class="registration-i-agee"
+                            type="checkbox"
+                            id="check"
+                            checked
+                        >
                         <span class="check-box"></span>
                         I agree to the
-                        <span class="registration-i-agee__span-words span-words">Terms</span> and
+                        <span class="registration-i-agee__span-words span-words">Terms</span>
+                        and
                         <span class="span-words">Privacy Policy</span>
-                        </label>
+                    </label>
+                    <div class="form-create-acc__radio-cont radio-cont radio-cont_wrapper">
+                        <div class="radio-cont__radio-gender radio-gender radio-gender_padding-right-40px">
+                            <input class="radio-cont__input-radio input-radio" type="radio" name="gender">
+                            <label class="input-label">Male</label>
+                        </div>
+                        <div class="radio-gender">
+                            <input class="input-radio" type="radio" name="gender">
+                            <label class="input-label">Female</label>
+                        </div>
+                    </div>
                     <div class="input-registration__input-button input-button input-button_wrapper">
                         <div>
                             <input class="input-button__button-sign button-sign button-sign_bg-color-orange" type="button" value="Sign Up">
