@@ -63,63 +63,82 @@ html {
     font-weight: 100;
 }
 
-.input-for-email-name-password_wrapper{
-display: flex;
-justify-content: center;
-margin-top: 20px;
+.input-for-email-name-password_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.registration{
+.registration {
     width: 380px;
     height: 45px;
     margin: 0 20px 15px 20px;
     background-color: #F7F8F9;
     border: #DAE5EA 2px solid;
-    border-radius:10px;
+    border-radius: 10px;
     padding: 15px;
 }
 
-.registration-i-agee{
-    margin: 5px 0 0 25px;
-    width: 25px;
-    height: 25px;
+.registration-i-agee {
+    position: absolute;
+    appearance: none;
+    overflow: hidden;
 }
 
-.span-words{
+.check-box {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    background-image: url("image/off-disabled.svg");
+    border-radius: 4px;
+    margin-left: -1.8em;
+}
+
+.registration-i-agee:checked+.check-box {
+    background-color: #FD5353;
+    background-image: url("image/method-draw-image.svg");
+}
+
+.option {
+    padding-left: 2.5em;
+    position: relative;
+    top: 10px;
+}
+
+.span-words {
     color: #FD5353;
 }
 
-.label_font-size{
+.label_font-size {
     font-size: 1rem;
     position: relative;
     left: 15px;
     bottom: 6px;
     font-weight: 100;
-    color: #435459;
 }
 
-.button-sign{
+.button-sign {
     width: 180px;
-    height:50px;
+    height: 50px;
     margin: 20px 10px 0 10px;
     border-radius: 10px;
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-.input-button_wrapper{
+.input-button_wrapper {
     display: flex;
     justify-content: center;
     margin: 20px 0 0 0;
 }
 
-.button-sign_bg-color-orange{
+.button-sign_bg-color-orange {
     background-color: #FD5353;
     border: none;
     color: white;
 }
 
-.button-sign_bg-color-white{
+.button-sign_bg-color-white {
     background-color: white;
     border: 2px #FD5353 solid;
     color: #FD5353;
