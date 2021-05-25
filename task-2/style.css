@@ -15,6 +15,10 @@ html {
     outline-offset: 0;
 }
 
+a:visited{
+    color: black
+}
+
 .header-form-cont_bg-light-green {
     background: #F7F8F9;
 }
