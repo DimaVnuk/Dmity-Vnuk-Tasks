@@ -109,6 +109,19 @@ a:visited{
     margin-left: -1.8em;
 }
 
+.check-box:hover{
+    cursor: pointer;
+}
+
+.label{
+    cursor: pointer;
+}
+
+.fab:hover{
+    background-color: #FD5353;
+    color: white;
+    border: 1px solid #FD5353;
+}
 .registration-i-agee:checked+.check-box {
     background-color: #FD5353;
     background-image: url("image/method-draw-image.svg");
@@ -190,14 +203,19 @@ input[type='radio']:checked:after {
     margin: 20px 0 0 0;
 }
 
-.button-sign_bg-color-orange {
-    background-color: #FD5353;
-    border: none;
-    color: white;
-}
 
-.button-sign_bg-color-white {
+.button-sign {
     background-color: white;
     border: 2px #FD5353 solid;
     color: #FD5353;
 }
+
+.button-sign:hover{
+    background-color: #FD5353;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
