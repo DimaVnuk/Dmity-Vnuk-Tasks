@@ -1,0 +1,221 @@
+html {
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    background: #F7F8F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+a:visited{
+    color: black
+}
+
+.header-form-cont_bg-light-green {
+    background: #F7F8F9;
+}
+
+.header-form-cont__image-people {
+    background-image: url("./image/imgpsh_fullsize.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 600px;
+}
+
+.title_color-red-position-center {
+    color: #FD5353;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 60px;
+}
+
+.form-create-acc_wrapper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    font-weight: 600;
+    height: 600px;
+}
+
+.header-form-cont_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.social-net_wrapper {
+    display: flex;
+    margin: 30px 145px;
+}
+
+.fa-size {
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 6px;
+    margin: 0 10px 0 12px;
+}
+
+.sub-title_wrapper {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.input-for-email-name-password_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fa-wrapper-color-oranged {
+    position: relative;
+    right: 50px;
+    color: #FD5353;
+    font-size: 20px;
+}
+
+.registration {
+    width: 380px;
+    height: 45px;
+    margin: 0 20px 15px 20px;
+    background-color: #F7F8F9;
+    border: #DAE5EA 2px solid;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.registration-i-agee {
+    position: absolute;
+    appearance: none;
+    overflow: hidden;
+}
+
+.check-box {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    background-image: url("image/off-disabled.svg");
+    border-radius: 4px;
+    margin-left: -1.8em;
+}
+
+.check-box:hover{
+    cursor: pointer;
+}
+
+.label{
+    cursor: pointer;
+}
+
+.fab:hover{
+    background-color: #FD5353;
+    color: white;
+    border: 1px solid #FD5353;
+}
+.registration-i-agee:checked+.check-box {
+    background-color: #FD5353;
+    background-image: url("image/method-draw-image.svg");
+}
+
+.option {
+    padding-left: 2.5em;
+    position: relative;
+    top: 10px;
+}
+
+.span-words {
+    color: #FD5353;
+}
+
+.label_font-size {
+    font-size: 1rem;
+    position: relative;
+    left: 15px;
+    bottom: 6px;
+    font-weight: 100;
+}
+
+.radio-cont_wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.radio-gender_padding-right-40px {
+    padding-right: 40px;
+}
+
+.input-label {
+    padding-left: 10px;
+}
+
+.radio-gender {
+    font-size: 1.1rem;
+    color: #FD5353;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #DAE5EA;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #FD5353;
+    content: '';
+    visibility: visible;
+    border: 2px solid #FD5353;
+}
+
+.button-sign {
+    width: 180px;
+    height: 50px;
+    margin: 20px 10px 0 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.input-button_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+
+.button-sign {
+    background-color: white;
+    border: 2px #FD5353 solid;
+    color: #FD5353;
+}
+
+.button-sign:hover{
+    background-color: #FD5353;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
