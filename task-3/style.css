@@ -9,32 +9,30 @@ html {
     font-family: 'Permanent Marker', cursive;
 }
 
-/* .preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
- 
-  background: #e0e0e0;
+.preloader {
+ position: absolute; 
+  left:10px;
+  z-index: 3;
 }
 
-  
-  
-  .fa-redo-alt {
+.fa-redo-alt {
     animation-name: loadTransform;
     animation-iteration-count: 5s;
     animation-duration: 5s;
     font-size: 60px;
-    color: white;
-    font-size: 150px;
+    
 }
-
+.main-page{
+    animation: loadBody 0s 5s forwards;
+    visibility: hidden;
+}
 
 @keyframes loadTransform {
     from {
+        visibility: visible; 
         color: white;
-        transform: rotate(45deg)
+        transform: rotate(45deg);
+        opacity: 1;
     }
     25% {
         color: rgb(218, 83, 83);
@@ -45,16 +43,24 @@ html {
         transform: rotate(180deg)
     }
     to {
-        display: none;
         transform: rotate(45deg);
-
+        position: relative;
+        
     }
-} */
+}
+
+
+@keyframes loadBody {
+    to   { 
+        position: absolute;
+        visibility: visible; 
+        z-index: 4;
+    }
+}
+
 
 .navbar_navigator {
     width: 100%;
-    /* height: 5vh; */
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -78,7 +84,6 @@ html {
 .main-page__header {
     width: 100%;
     height: 1000px;
-    /* border: 1px solid #000; */
 }
 
 .title_text-font-cursive-color-white {
@@ -93,15 +98,12 @@ html {
 
 .main-paige__description {
     width: auto;
-    /* height: 450px; */
-    /* border: 1px solid #000; */
     padding: 10px;
 }
 
 .desc-image {
     width: 200px;
     height: 200px;
-    /* border: 1px solid #000; */
     margin-bottom: 10px;
 }
 
@@ -145,7 +147,6 @@ html {
 
 .main-page__footer {
     width: 80%;
-    /* height: 70px; */
     border: 1px solid rgb(189, 186, 189);
     border-radius: 30px 30px 0 0;
     border-bottom: none;
