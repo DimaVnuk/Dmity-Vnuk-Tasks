@@ -17,3 +17,9 @@
 html {
     font-family: Hind,sans-serif;
 }
+
+h3 {
+    font-weight: 700;
+    color: #515769;
+    line-height: 1.5;
+}

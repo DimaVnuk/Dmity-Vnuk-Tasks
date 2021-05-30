@@ -5,3 +5,24 @@
     border-radius: 5px;
     background: transparent;
 }
+
+.feature{
+    width: 380px;
+    height: 250px;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+
+.fa-feature{
+    font-size: 30px;
+    color: #999caa;
+}
+
+.desc-feature{
+    font-size: 15px;
+    font-weight: 400;
+    color: #a6a7aa;
+}
