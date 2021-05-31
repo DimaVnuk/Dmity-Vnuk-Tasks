@@ -1,0 +1,100 @@
+.clients-page__pricing-cont{
+    width: 100%;
+    height: 270px;
+    /* border: 1px solid #000; */
+}
+
+.pricing-cont-bg-wrap{
+background: #fafafa;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.img-our-clients_bg-discord{
+    background: url("../img/clients/01.png");
+    background-repeat: no-repeat;
+}
+
+.img-our-clients_bg-netflix{
+    background: url("../img/clients/02.png");
+    background-repeat: no-repeat;
+}
+
+.img-our-clients_bg-broadcom{
+    background: url("../img/clients/03.png");
+    background-repeat: no-repeat;
+}
+
+.img-our-clients_bg-hoop{
+    background: url("../img/clients/04.png");
+    background-repeat: no-repeat;
+}
+
+.img-our-clients_bg-airbnb{
+    background: url("../img/clients/05.png");
+    background-repeat: no-repeat;
+}
+
+.img-our-clients{
+    width: 205px;
+    height: 80px;
+    margin-right: 25px;
+}
+
+.clients-page__quote-clients{
+    width: 100%;
+    height: 450px;
+   /*  border: 1px solid #000; */
+}
+
+.quote-cont_wrap{
+   margin: auto;
+   margin-top: 80px;
+    margin-left: 400px;
+    width: 800px;
+    height: 200px;
+}
+
+.quote-desc-second_padding-top-bottom{
+    padding: 20px 0 30px 0;
+}
+
+.quote-desc-first_padding-top-bottom{
+    padding: 20px 0 10px 0;
+}
+
+.title-quote_margin-left{
+    position: relative;
+    right: 40px;
+}
+
+.title-quote_font-color-weight{
+    font-weight: 700;
+    color: #515769;
+    line-height: 1.4;
+    font-size: 30px;
+}
+
+.quote-author_color-gray{
+color: #a6a7aa;
+}
+
+.quote-author_font-weight-color{
+    font-weight: 700;
+    color:#81848f;
+}
+
+.quote-cont__fa-quote{
+    position: relative;
+    top: 45px;
+    right: 40px;
+}
+
+.fa-quote_bg{
+    color: #17bed2;
+}
+
+
+
