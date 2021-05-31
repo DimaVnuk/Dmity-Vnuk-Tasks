@@ -52,3 +52,15 @@
 .read-more{
     padding-top: 20px;
 }
+
+.list{
+    padding-bottom: 10px;
+}
+
+.button-choose-price{
+    width: 120px;
+    height: 50px;
+    color: #515769;
+    background: #f3f4f5;
+    border-color: transparent;
+}
