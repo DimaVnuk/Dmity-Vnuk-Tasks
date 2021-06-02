@@ -6,7 +6,9 @@
 @import url('./style/contact.css');
 @import url('./style/common.css');
 @import url('./style/showcase.css');
-
+@import url('./style/adaptive-dekstop.css');
+@import url('./style/adaptive-tablet.css');
+@import url('./style/adaptive-mobile.css');
 * {
     margin: 0;
     padding: 0;
