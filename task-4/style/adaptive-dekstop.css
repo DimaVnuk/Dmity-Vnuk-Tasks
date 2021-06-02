@@ -1,15 +1,191 @@
 @media only screen and (max-width:1639px) {
-    .img-cont-products{
-      margin: 5px;
+    .img-cont-products {
+        margin: 5px;
     }
-    .latest-products_width-wrap{
-        
-        margin: 100px 0 0 270px; /* может быть опасно , сместил latest product title */
+    .latest-products_width-wrap {
+        margin: 100px 0 0 270px;
     }
-    .cont-with-text-our-clients__cont-for-text{
+    .cont-with-text-our-clients__cont-for-text {
         margin-left: 240px;
     }
-    .showcase-page__cont-showcase-text{
+    .showcase-page__cont-showcase-text {
         margin-left: 240px;
-        }
+    }
+    .navigation__email-addres {
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width:1560px) {
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 190px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 190px;
+    }
+}
+
+@media only screen and (max-width:1470px) {
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 150px;
+    }
+    .latest-products_width-wrap {
+        margin: 100px 0 0 185px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 150px;
+    }
+    .input-name-email-phone-message-cont_wrap {
+        right: 50px;
+    }
+    .title-form_color-wrap {
+        right: 50px;
+    }
+}
+
+@media only screen and (max-width:1392px) {
+    .latest-products_width-wrap {
+        margin: 100px 0 0 150px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 120px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 120px;
+    }
+    .title-form_color-wrap {
+        right: 20px;
+    }
+    .input-name-email-phone-message-cont_wrap {
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width:1358px) {
+    .latest-products_width-wrap {
+        margin: 100px 0 0 130px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 100px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .latest-products_width-wrap {
+        margin: 100px 0 0 100px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 70px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 70px;
+    }
+}
+
+@media only screen and (max-width:1256px) {
+    .latest-products_width-wrap {
+        margin: 100px 0 0 80px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 50px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 50px;
+    }
+    .quote-cont_wrap {
+        margin-left: 200px;
+    }
+}
+
+@media only screen and (max-width:1218px) {
+    .latest-products_width-wrap {
+        margin: 100px 0 0 60px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 30px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 30px;
+    }
+    .title-desc-button_size-wrap {
+        padding: 260px 0 0 200px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .latest-products_width-wrap {
+        margin: 100px 0 0 50px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 20px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width:1184px) {
+    .feature-cont_margin-size {
+        width: 1140px;
+        height: 500px;
+    }
+    .desc-feature {
+        font-size: 14px;
+        width: 300px;
+    }
+    .feature {
+        width: 300px;
+    }
+    .feature-cont_margin-size {
+        width: 950px;
+    }
+    .img-cont-products {
+        width: 300px;
+    }
+    .desc-cont-products {
+        width: 300px;
+        font-size: 14px;
+    }
+    .latest-products_width-wrap {
+        margin: 100px 0 0 60px;
+    }
+    .image-first_size-image {
+        width: 600px;
+    }
+    .block-with-img-second_size-wrap {
+        width: 600px;
+    }
+    .sub-page-our-clients__image-our-clients-cont{
+        width: 40%;
+position: relative;
+left: 118px;
+    }
+
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 100px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 100px;
+    }
+    .input-name-email-phone-message-cont_wrap{
+        position: relative;
+        left: 30px;
+    }
+
+    .title-form_color-wrap{
+        position: relative;
+        left: 30px;
+    }
+
+    .navigation-link-cont_wrap{
+        margin-right: 150px;
+    }
+
+    .img-our-clients{
+        width: 205px;
+        margin: 0;
+    }
 }

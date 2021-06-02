@@ -9,7 +9,6 @@ background: #fafafa;
 display: flex;
 justify-content: center;
 align-items: center;
-
 }
 
 .img-our-clients_bg-discord{
@@ -37,11 +36,7 @@ align-items: center;
     background-repeat: no-repeat;
 }
 
-.img-our-clients{
-    width: 205px;
-    height: 80px;
-    margin-right: 25px;
-}
+
 
 .clients-page__quote-clients{
     width: 100%;
