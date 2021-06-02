@@ -14,26 +14,31 @@ align-items: center;
 .img-our-clients_bg-discord{
     background: url("../img/clients/01.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .img-our-clients_bg-netflix{
     background: url("../img/clients/02.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .img-our-clients_bg-broadcom{
     background: url("../img/clients/03.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .img-our-clients_bg-hoop{
     background: url("../img/clients/04.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .img-our-clients_bg-airbnb{
     background: url("../img/clients/05.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 

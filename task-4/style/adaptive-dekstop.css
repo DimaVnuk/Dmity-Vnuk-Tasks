@@ -87,7 +87,7 @@
 
 @media only screen and (max-width:1256px) {
     .latest-products_width-wrap {
-        margin: 100px 0 0 80px;
+        margin: 100px 0 0 60px;
     }
     .cont-with-text-our-clients__cont-for-text {
         margin-left: 50px;
@@ -158,34 +158,125 @@
     .block-with-img-second_size-wrap {
         width: 600px;
     }
-    .sub-page-our-clients__image-our-clients-cont{
+    .sub-page-our-clients__image-our-clients-cont {
         width: 40%;
-position: relative;
-left: 118px;
+        position: relative;
+        left: 118px;
     }
-
     .cont-with-text-our-clients__cont-for-text {
         margin-left: 100px;
     }
     .showcase-page__cont-showcase-text {
         margin-left: 100px;
     }
-    .input-name-email-phone-message-cont_wrap{
+    .input-name-email-phone-message-cont_wrap {
         position: relative;
         left: 30px;
     }
-
-    .title-form_color-wrap{
+    .title-form_color-wrap {
         position: relative;
         left: 30px;
     }
-
-    .navigation-link-cont_wrap{
+    .navigation-link-cont_wrap {
         margin-right: 150px;
     }
-
-    .img-our-clients{
+    .img-our-clients {
         width: 205px;
         margin: 0;
     }
+}
+
+@media only screen and (max-width:1168px) {
+    .products-paige__cont-with-products {
+        padding: 30px 50px 0 90px;
+    }
+    .sub-page-our-clients__image-our-clients-cont {
+        width: 50%;
+        position: relative;
+        left: 0;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        margin-left: 10px;
+    }
+    .cont-with-text-our-clients__cont-for-text {
+        width: 450px;
+        position: relative;
+        bottom: 50px;
+        left: 30px;
+        margin-left: 30px;
+    }
+    .font-size-paragraph-our-clients {
+        font-size: 16px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 65px;
+    }
+}
+
+@media only screen and (max-width:1118px) {
+    .registration {
+        width: 350px;
+    }
+    .registration-textarea {
+        width: 350px;
+    }
+    .navigation__email-addres {
+        text-align: center;
+    }
+    .products-paige__cont-with-products {
+        padding: 0;
+        position: relative;
+        left: 25px;
+    }
+    .navbar_size-wrap {
+        position: relative;
+        right: 130px;
+    }
+    .products-paige__cont-with-products {
+        width: 1050px;
+    }
+    .desc-cont-products {
+        width: 300px;
+    }
+    .title-cont-products {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:1074px) {
+    .products-paige__cont-with-products {
+        width: 1030px;
+    }
+}
+
+@media only screen and (max-width:1054px) {
+    .products-paige__cont-with-products {
+        width: 1010px;
+    }
+}
+
+@media only screen and (max-width:1048px) {
+    .products-paige__cont-with-products {
+        width: 1000px;
+    }
+    .price {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:1040px) {
+    .cont-with-text-our-clients__cont-for-text {
+     margin-left: 1px;
+    }
+    .showcase-page__cont-showcase-text {
+        margin-left: 20px;
+    }
+    .img-our-clients{
+        width: 150px;
+        
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    
 }
