@@ -64,3 +64,12 @@
     background: #f3f4f5;
     border-color: transparent;
 }
+
+.registration{
+    width: 450px;
+    height: 55px;
+    background: rgba(0,0,0,.15);
+    border: none;
+    margin-top: 15px;
+}
+
