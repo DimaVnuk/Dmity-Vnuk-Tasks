@@ -1,0 +1,15 @@
+@media only screen and (max-width:1639px) {
+    .img-cont-products{
+      margin: 5px;
+    }
+    .latest-products_width-wrap{
+        
+        margin: 100px 0 0 270px; /* может быть опасно , сместил latest product title */
+    }
+    .cont-with-text-our-clients__cont-for-text{
+        margin-left: 240px;
+    }
+    .showcase-page__cont-showcase-text{
+        margin-left: 240px;
+        }
+}
