@@ -89,3 +89,8 @@ bottom: 50px;
    text-align: end;
     
 }
+.registration-button{
+    background: #17bed2;
+    color: white;
+    border: none;
+}
