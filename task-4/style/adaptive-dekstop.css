@@ -266,17 +266,27 @@
 
 @media only screen and (max-width:1040px) {
     .cont-with-text-our-clients__cont-for-text {
-     margin-left: 1px;
+        margin-left: 1px;
     }
     .showcase-page__cont-showcase-text {
         margin-left: 20px;
     }
-    .img-our-clients{
+    .img-our-clients {
         width: 150px;
-        
     }
 }
 
-@media only screen and (max-width:1024px) {
-    
+@media only screen and (max-width:1025px) {
+    .quote-cont_wrap {
+        position: relative;
+        right: 30px;
+    }
+    .third__image-fourth-size-image {
+        width: 300px;
+    }
+    .image-fifth-size-image {
+        width: 300px;
+    }
 }
+
+

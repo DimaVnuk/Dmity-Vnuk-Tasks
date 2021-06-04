@@ -5,15 +5,16 @@
 }
 
 .latest-products_width-wrap{
-    width: 590px;
+   /*  width: 100%; */
     height: 115px;
-    margin: 100px 0 0 370px; /* может быть опасно , сместил latest product title */
+    margin: 100px 0 0 0; /* может быть опасно , сместил latest product title */
 }
 
 .products-paige__cont-with-products{
+    /* width: 100%; */
     display: flex;
     justify-content: space-around;
-    padding: 30px 350px 0 350px;
+    /* padding: 30px 350px 0 350px; */
     
 }
 
