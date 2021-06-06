@@ -1,35 +1,30 @@
 .showcase-page_size {
     width: 100%;
     height: 950px;
-    /* border: 1px solid #000; */
     background: #fafafa;
 }
 
-
-.showcase-page__cont-showcase-text{
-width: 580px;
-height: 120px;
-/* border: 1px solid #000; */
-margin-left: 370px;
-/* margin-top: 80px; */
-/* padding: 10px; */
-padding-top: 60px;
-margin-bottom: 80px;
+.showcase-page__cont-showcase-text {
+    width: 580px;
+    height: 120px;
+    margin-left: 370px;
+    padding-top: 60px;
+    margin-bottom: 80px;
 }
 
-.paragraph-showcase_padding-top{
+.paragraph-showcase_padding-top {
     padding-top: 15px;
 }
 
-.all-block-cont-with-img_wrapper{
-display: flex;
-justify-content: center;
-margin-top: 50px;
+.all-block-cont-with-img_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
+
 .image-first_size-image {
     width: 760px;
     height: 380px;
-    /* border: 1px solid #000; */
     background: url("../img/800x400/01.jpg");
     background-repeat: no-repeat;
 }
@@ -37,20 +32,18 @@ margin-top: 50px;
 .block-with-img-second_size-wrap {
     width: 760px;
     height: 300px;
-    /* border: 1px solid #000; */
     display: flex;
     padding-top: 10px;
-    padding-right:3px;
+    padding-right: 3px;
 }
 
-.block-with-image-third_size{
+.block-with-image-third_size {
     padding-left: 10px;
 }
 
 .image-second_size-image {
     width: 380px;
     height: 300px;
-    /* border: 1px solid #000; */
     background: url("../img/397x300/01.jpg");
     background-repeat: no-repeat;
 }
@@ -58,27 +51,22 @@ margin-top: 50px;
 .image-third-size-image {
     width: 380px;
     height: 300px;
-    /* border: 1px solid #000; */
     background: url("../img/397x300/02.jpg");
     background-repeat: no-repeat;
     margin-left: 10px;
 }
 
-
-
-.third__image-fourth-size-image{
+.third__image-fourth-size-image {
     width: 400px;
     height: 380px;
-    /* border: 1px solid #000; */
     background: url("../img/397x400/01.jpg");
     background-repeat: no-repeat;
 }
 
-.image-fifth-size-image{
+.image-fifth-size-image {
     width: 400px;
     height: 300px;
-    /* border: 1px solid #000; */
     background: url("../img/397x300/03.jpg");
     background-repeat: no-repeat;
-   margin-top: 10px;
+    margin-top: 10px;
 }

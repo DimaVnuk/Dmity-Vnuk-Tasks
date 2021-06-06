@@ -1,146 +1,135 @@
-.clients-page__pricing-cont{
+.clients-page__pricing-cont {
     width: 100%;
     height: 270px;
-    /* border: 1px solid #000; */
 }
 
-.pricing-cont-bg-wrap{
-background: #fafafa;
-display: flex;
-justify-content: center;
-align-items: center;
+.pricing-cont-bg-wrap {
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.img-our-clients_bg-discord{
+.img-our-clients_bg-discord {
     background: url("../img/clients/01.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.img-our-clients_bg-netflix{
+.img-our-clients_bg-netflix {
     background: url("../img/clients/02.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.img-our-clients_bg-broadcom{
+.img-our-clients_bg-broadcom {
     background: url("../img/clients/03.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.img-our-clients_bg-hoop{
+.img-our-clients_bg-hoop {
     background: url("../img/clients/04.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.img-our-clients_bg-airbnb{
+.img-our-clients_bg-airbnb {
     background: url("../img/clients/05.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-
-
-.clients-page__quote-clients{
+.clients-page__quote-clients {
     width: 100%;
     height: 450px;
-   /*  border: 1px solid #000; */
 }
 
-.quote-cont_wrap{
-   margin: auto;
-   margin-top: 80px;
+.quote-cont_wrap {
+    margin: auto;
+    margin-top: 80px;
     margin-left: 400px;
     width: 800px;
     height: 200px;
 }
 
-.quote-desc-second_padding-top-bottom{
+.quote-desc-second_padding-top-bottom {
     padding: 20px 0 30px 0;
 }
 
-.quote-desc-first_padding-top-bottom{
+.quote-desc-first_padding-top-bottom {
     padding: 20px 0 10px 0;
 }
 
-.title-quote_margin-left{
+.title-quote_margin-left {
     position: relative;
     right: 40px;
 }
 
-.title-quote_font-color-weight{
+.title-quote_font-color-weight {
     font-weight: 700;
     color: #515769;
     line-height: 1.4;
     font-size: 30px;
 }
 
-.quote-author_color-gray{
-color: #a6a7aa;
+.quote-author_color-gray {
+    color: #a6a7aa;
 }
 
-.quote-author_font-weight-color{
+.quote-author_font-weight-color {
     font-weight: 700;
-    color:#81848f;
+    color: #81848f;
 }
 
-.quote-cont__fa-quote{
+.quote-cont__fa-quote {
     position: relative;
     top: 45px;
     right: 40px;
 }
 
-.fa-quote_bg{
+.fa-quote_bg {
     color: #17bed2;
 }
 
-
-
-
-.sub-page-our-clients_size{
+.sub-page-our-clients_size {
     width: 100%;
     height: 400px;
-    /* border: 1px solid #000; */
 }
 
-.sub-page-our-clients__cont-with-text-our-clients{
+.sub-page-our-clients__cont-with-text-our-clients {
     width: 50%;
     height: 400px;
-    /* border: 1px solid #000; */
 }
 
-.image-our-clients-cont_bg-image{
+.image-our-clients-cont_bg-image {
     background: url("../img/970x970/01.jpg");
     background-size: cover;
 }
 
-.sub-page-our-clients__image-our-clients-cont{
+.sub-page-our-clients__image-our-clients-cont {
     width: 50%;
     height: 400px;
-   /*  border: 1px solid #000; */
 }
 
-.sub-page-our-clients_size-wrap{
+.sub-page-our-clients_size-wrap {
     display: flex;
 }
 
-.cont-with-text-our-clients__cont-for-text{
+.cont-with-text-our-clients__cont-for-text {
     width: 550px;
-    /* border: 1px solid #000; */
     margin-left: 370px;
     margin-top: 100px;
 }
 
-.title-our-clients_padding-bottom{
+.title-our-clients_padding-bottom {
     padding-bottom: 20px;
 }
 
-.desc-our-clients-first-paragraph_padding-bottom{
+.desc-our-clients-first-paragraph_padding-bottom {
     padding-bottom: 20px;
 }
 
-.desc-our-clients-second-paragraph_padding-bottom{
-padding-bottom: 20px;
+.desc-our-clients-second-paragraph_padding-bottom {
+    padding-bottom: 20px;
 }

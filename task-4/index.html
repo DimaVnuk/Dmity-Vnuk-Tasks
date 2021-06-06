@@ -1,275 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/4aa750a57f.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<body>
-    
-<header class="header-paige header-paige_size-bg-image">
-    <nav class="header-paige__navigation navigation navigation_border-bottom">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/4aa750a57f.js" crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header-paige header-paige_size-bg-image" id="home">
+            <!-- <nav class="header-paige__navigation navigation navigation_border-bottom">
             <div class="navigation__title-nav title-nav title-nav_img-asentus"><img src="./img/logo-white.png"></div>
         <div class="navigation__navbar navbar navbar_size-wrap">
-            <div class="navbar__nav-elem nav-elem">HOME</div>
-            <div class="navbar__nav-elem nav-elem">PRICING</div>
-            <div class="navbar__nav-elem nav-elem">ABOUT</div>
-            <div class="navbar__nav-elem nav-elem">PRODUCTS</div>
-            <div class="navbar__nav-elem nav-elem">FAQ</div>
-            <div class="navbar__nav-elem nav-elem">CONTACT</div>
+            <div class="navbar__nav-elem nav-elem"><a class="link" href="#home">HOME</a></div>
+            <div class="navbar__nav-elem nav-elem"><a  class="link" href="#pricing">PRICING</a></div>
+            <div class="navbar__nav-elem nav-elem"><a  class="link"  href="#about">ABOUT</a></div>
+            <div class="navbar__nav-elem nav-elem"><a  class="link"  href="#products">PRODUCTS</a></div>
+            <div class="navbar__nav-elem nav-elem"><a  class="link"  href="#image">IMAGE</a></div>
+            <div class="navbar__nav-elem nav-elem"><a  class="link"  href="#contact">CONTACT</a></div>
+        </div> -->
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox">
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li>
+                        <a class="menu__item" href="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#pricing">PRICING</a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#image">IMAGE</a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#products">PRODUCTS</a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header-paige__main-hi-tech-design main-hi-tech-design main-hi-tech-design_size-wrap">
+            <div class="main-hi-tech-design__title-desc-button title-desc-button title-desc-button_size-wrap">
+                <div class="title-desc-button__title-hi-tech desc-hi-tech desc-hi-tech_font-size-40-px-color-white">
+                    <h1>HI-TECH DESIGN</h1>
+                </div>
+                <div class="title-desc-button__desc-hi-tech desc-hi-tech desc-hi-tech_color-grey-font-size-15px">
+                    Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua
+        enim minim estudiat veniam siad venumus dolore
+                </div>
+                <div class="title-desc-button__button button">
+                    <button class="button-explore__button-explore button-explore button-explore-bg-color-transparent">EXPLORE</button>
+                </div>
+                <div class="button-top">
+                    <a href="#home">
+                        <button class="button-top-decor">TOP</button>
+                    </a>
+                </div>
+            </div>
+            <!-- end main-hi-tech-design__title-desc-button-->
         </div>
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-              <span></span>
-            </label>
-            <ul class="menu__box">
-              <li><a class="menu__item" href="#">HOME</a></li>
-              <li><a class="menu__item" href="#">PRICING</a></li>
-              <li><a class="menu__item" href="#">ABOUT</a></li>
-              <li><a class="menu__item" href="#">PRODUCTS</a></li>
-              <li><a class="menu__item" href="#">CONTACT</a></li>
-            </ul>
-          </div>
+        <!-- end header-paige__main-hi-tech-design -->
+    </header>
+    <nav class="header-paige__navigation-fixed navigation-fixed navigation-fixed_border-bottom">
+        <div class="navigation__title-nav-fixed title-nav-fixed title-nav-fixed_img-asentus">
+            <img src="./img/logo-dark.png">
+        </div>
+        <div class="navigation__navbar-fixed navbar navbar_size-wrap">
+            <div class="navbar__nav-elem-fixed nav-elem-fixed">
+                <a class="link-fixed" href="#home">HOME</a>
+            </div>
+            <div class="navbar__nav-elem-fixed nav-elem-fixed">
+                <a class="link-fixed" href="#pricing">PRICING</a>
+            </div>
+            <div class="navbar__nav-elem-fixed nav-elem-fixed">
+                <a class="link-fixed" href="#about">ABOUT</a>
+            </div>
+            <div class="navbar__nav-elem-fixed nav-elem-fixed">
+                <a class="link-fixed" href="#products">PRODUCTS</a>
+            </div>
+            <div class="navbar__nav-elem-fixed nav-elem-fixed">
+                <a class="link-fixed" href="#image">IMAGE</a>
+            </div>
+            <div class="navbar__nav-elem-fixed nav-elem-fixed">
+                <a class="link-fixed" href="#contact">CONTACT</a>
+            </div>
+        </div>
     </nav>
-    <div class="header-paige__main-hi-tech-design main-hi-tech-design main-hi-tech-design_size-wrap">
-<div class="main-hi-tech-design__title-desc-button title-desc-button title-desc-button_size-wrap">
-    <div class="title-desc-button__title-hi-tech desc-hi-tech desc-hi-tech_font-size-40-px-color-white"><h1>HI-TECH DESIGN</h1></div>
-    <div class="title-desc-button__desc-hi-tech desc-hi-tech desc-hi-tech_color-grey-font-size-15px">Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua
-        enim minim estudiat veniam siad venumus dolore</div>
-    <div class="title-desc-button__button button"><button class="button-explore__button-explore button-explore button-explore-bg-color-transparent">EXPLORE</button></div>
-    <button class="header-paige__switch-button switch-button"></button>
-    <button class="switch-button"></button>
-</div><!-- end main-hi-tech-design__title-desc-button-->
-    </div><!-- end header-paige__main-hi-tech-design -->
-</header>
-
-
-
-<div class="main-paige main-paige_size-bg-color">
-<div class="main-paige__feature-cont feature-cont feature-cont_margin-size">
-<div class="feature-cont__feature feature">
-    <div class="feature__icon"><i class="fas fa-flask fa-feature"></i></div>
-    <div class="feature__title-feature title-feature"><h3>Art Of Coding<h3></div>
-    <div class="feature__desc-feature desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
- </div>
-<div class="feature">
-    <div class="feature__icon"><i class="fas fa-tablet fa-feature"></i></div>
-    <div class="title-feature"><h3>Responsive Design</h3></div>
-    <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
-</div>
-<div class="feature">
-    <div class="feature__icon"><i class="fas fa-medal fa-feature"></i></div>
-    <div class="title-feature"><h3>Feature Reach<h3></div>
-    <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
-</div>
-<div class="feature">
-    <div class="feature__icon"><i class="fas fa-sticky-note fa-feature"></i></div>
-    <div class="title-feature"><h3>Useful Documentation</h3></div>
-    <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
-</div>
-<div class="feature">
-    <div class="feature__icon"><i class="fas fa-tachometer-alt fa-feature"></i></div>
-    <div class="title-feature"><h3>Fast Delivery<h3></div>
-    <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
-</div>
-<div class="feature">
-    <div class="feature__icon"><i class="fas fa-medal fa-feature"></i></div>
-    <div><h3>Free Plugins<h3></div>
-    <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
-</div>
-</div><!-- end cont for icon Art of coding and etc -->
-</div><!-- end main-paige main-paige_size-->
-
- 
-
-
-
-<div class="products-paige products-paige_size-wrap">
-        <div class="products-paige__latest-products latest-products latest-products_width-wrap">
-            <div class="latest-products__title-products title-products title-products_padding-bottom"><h2>Latest Products</h2></div>
-            <div class="latest-products__desc-products desc-products"><p class="desc-prod">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p></div>
-        </div>
-        <div class="products-paige__cont-with-products">
-   <div class="products-paige__products-img-title-desc products-img-title-desc"> 
-<div class="products-img-title-desc__img-cont-products img-cont-products img-cont-products_bg-triangle-roof"></div>
-<div class="products-img-title-desc__title-cont-products title-cont-products"><h3>Triangle Roof<h3></div>
-<div class="products-img-title-desc__desc-cont-products desc-cont-products">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor<p class="desc-cont-products__read-more read-more">READ MORE</p></div>
-   </div>
-   <div class="products-img-title-desc">
-    <div class="products-img-title-desc__img-cont-products img-cont-products img-cont-products_bg-curved-corners"></div>
-    <div class="products-img-title-desc__title-cont-products title-cont-products"><h3>Curved Corners</h3></div>
-    <div class="products-img-title-desc__desc-cont-products desc-cont-products">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor<p class="read-more">READ MORE</p></div>
-       </div>
-       <div class="products-img-title-desc">
-        <div class="products-img-title-desc__img-cont-products img-cont-products img-cont-products_bg-bird-on-green"></div>
-        <div class="products-img-title-desc__title-cont-products title-cont-products"><h3>Bird On Green</h3></div>
-        <div class="products-img-title-desc__desc-cont-products desc-cont-products">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor<p class="read-more">READ MORE</p></div>
-           </div>
-        </div>
-</div><!-- end products page -->
-
-
-
-<div class="clients-page">
-    <div class="clients-page__pricing-cont pricing-cont pricing-cont-bg-wrap">
-        <div class="pricing-cont__img-our-clients-discord img-our-clients  img-our-clients_bg-discord"></div>
-        <div class="pricing-cont__img-our-clients-netflix img-our-clients  img-our-clients_bg-netflix"></div>
-        <div class="pricing-cont__img-our-clients-broadcom img-our-clients  img-our-clients_bg-broadcom"></div>
-        <div class="pricing-cont__img-our-clients-hoop img-our-clients  img-our-clients_bg-hoop"></div>
-        <div class="pricing-cont__img-our-clients-airbnb img-our-clients  img-our-clients_bg-airbnb"></div>
-    </div>
-</div><!-- end clients-page -->
-
-
-
-
-
-<div class="clients-page__quote-clients quote-clients">
-    <div class="quote-clients__quote-cont quote-cont quote-cont_wrap">
-   <div class="quote-cont__title-qoute title-quote title-quote title-quote_margin-left"><h2 class="title-quote_font-color-weight">Custom Reviews</h2></div>
-   <span class="quote-cont__fa-quote fa-quote fa-quote_bg"><i class="fas fa-quote-left"></i></span><p class="quote-cont__quote-desc-first quote-desc-first quote-desc-first_padding-top-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum aut nesciunt blanditiis, fugiat provident mollitia minima ex delectus libero ea incidunt modi dolorem sed, obcaecati harum dicta dolore officia praesentium et omnisvel.</p> 
-    <p class="quote-cont_quote-desc-second quote-desc-second quote-desc-second_padding-top-bottom">Soluta molestias repellat! Molestias dolore provident iure repellat incidunt blanditiis nobis totam sequi aliquid ipsa?</p>
-   <div class="quote-desc__quote-author"><span class="quote-author_font-weight-color">Alex Clarson</span>,<span class="quote-author_color-gray">Metronic Customer</span></div>
-</div>
-</div><!-- end of clients-page__quote-clients -->
-
-
-<div class="pricing-page pricing-page_size">
-    <div class="pricing-page_pricing-cont pricing-cont pricing-cont_wrap-size-bg">
-        <div class="pricing-cont__price price">
-            <div class="price__icon"><i class="fas fa-flask fa-feature"></i></div>
-            <div class="price__title-price title-price"><h3>Starter Kit - $ 49</h3></div>
-            <div class="price__desc-price desc-price"><p class="desc-price-font-size">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor<p></div>
-            <div class="price__feature-price feature-price">
-                <p class="list"> - Basic Features</p>
-                <p class="list"> - Up to 5 products</p>
-                <p class="list"> - 50 Users Panels</p>
-            </div>
-            <div class="price__button-choose"><button class="button-choose__button-choose-price button-choose-price">CHOOSE</button></div>
-        </div><!-- end cont -->
-
-
-        <div class="pricing-cont__price price">
-            <div class="price__icon"><i class="fas fa-medal fa-feature"></i></div>
-            <div class="price__title-price title-price"><h3>Professional - $ 149</h3></div>
-            <div class="price__desc-price desc-price"><p class="desc-price-font-size">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor<p></div>
-            <div class="price__feature-price feature-price">
-                <p class="price__list list"> - Basic Features</p>
-                <p class="list"> - Up to 100 products</p>
-                <p class="list"> - 100 Users Panels</p>
-            </div>
-            <div class="price__button-choose"><button class="button-choose-price">CHOOSE</button></div>
-        </div><!-- end cont -->
-
-
-        <div class="pricing-cont__price price">
-            <div class="price__icon"><i class="fas fa-tablet fa-feature"></i></div>
-            <div class="price__title-price title-price"><h3>Advanced - $ 249</h3></div>
-            <div class="price__desc-price desc-price"><p class="desc-price-font-size">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor<p></div>
-            <div class="price__feature-price feature-price">
-                <p class="list"> - Extended Features</p>
-                <p class="list"> - Unlimited products</p>
-                <p class="list"> - Unlimited Users Panels</p>
-            </div>
-            <div class="price__button-choose"><button class="button-choose-price">CHOOSE</button></div>
-        </div><!-- end cont -->
-        
-    </div><!-- end of pricing-page_pricing-cont -->
-</div><!-- end of pricing-page -->
-
-
-
-
-
-
-<div class="sub-page-our-clients sub-page-our-clients_size-wrap">
-  <div class="sub-page-our-clients__cont-with-text-our-clients cont-with-text-our-clients cont-with-text-our-clients_wrap">
-      <div class="cont-with-text-our-clients__cont-for-text">
-    <div class="cont-with-text-our-clients__title-our-clients title-our-clients title-our-clients_padding-bottom"><h2>Our Clients<h2></div>
-    <div class="cont-with-text-our-clients__desc-our-clients-first-paragraph desc-our-clients-first-paragraph desc-our-clients-first-paragraph_padding-bottom"><p class="font-size-paragraph-our-clients">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation<p></div>
-    <div class="cont-with-text-our-clients__desc-our-clients-second-paragraph desc-our-clients-second-paragraph__padding-bottom"><p class="font-size-paragraph-our-clients">Ipsum dolor sit amet consectetur adipiscing elit sed tempor incididut ut sead laboret dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing</p></div>
-  </div>
-  </div>
-<div class="sub-page-our-clients__image-our-clients-cont image-our-clients-cont image-our-clients-cont_bg-image"></div>
-</div><!-- end of sub-page-our-clients -->
-
-
-
-
-<div class="showcase-page showcase-page_size">
-    <div class="showcase-page__cont-showcase-text cont-showcase-text cont-showcase-text_wrap">
-        <div class="cont-showcase-text"><h2>Showcase</h2></div>
-        <div class="paragraph-showcase-block"><p class="cont-showcase-text__paragraph-showcase paragraph-showcase paragraph-showcase_padding-top">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p></div>
-    </div>
-<div class="showcase-page__all-block-cont-with-img all-block-cont-with-img_wrapper">
-    <div class="showcase-page_cont-with-img-first cont-with-img-first cont-with-img-first_wrap">
-        <div class="cont-with-img-first__image-first image-first image-first_size-image"></div>
-            <div class="cont-with-img-first__block-with-img-second block-with-img-second block-with-img-second_size-wrap">
-                <div class="block-with-img-second__image-second image-second image-second_size-image"></div>
-                <div class="block-with-img-second__image-third image-third image-third-size-image"></div>
-            </div>
-    </div class="showcase-page_cont-with-img-second cont-with-img-second cont-with-img-second_size-image">
-    <div class="cont-with-img-second__block-with-image-third block-with-image-third block-with-image-third_size">
-        <div class="block-with-image-third__image-fourth third__image-fourth-size-image"></div>
-        <div class="block-with-image-third__image-fifth image-fifth-size-image"></div>
-    </div>
-    </div>
-</div><!-- end of showcase-page -->
-
-
-
-<div class="footer-page footer-page_bg">
-<div class="contact-page contact-page_size-bg">
-    <div class="contact-page__navigation-link-cont navigation-link-cont navigation-link-cont_wrap">
-        <div class="navigation-link-cont__navbar-column navbar-column navbar-column_text-nav-and-padding">
-            <div>Home</div>
-            <div>About</div>
-            <div>Products</div>
-            <div>Pricing</div>
-            <div>Clients</div>
-            <div>Careers</div>
-            <div>Contact</div>
-            <div>Terms</div>
-        </div>
-        <div class="navigation-link-cont__social-net-column social-net-column social-net-column_text-soc-net-wrap">
-            <div>Twitter</div>
-            <div>Facebook</div>
-            <div>Instagram</div>
-            <div>YouTube</div>
-        </div><!-- end of navigation-link-cont__social-net-column -->
-
-    </div><!-- end of contact-page__navigation-link-cont -->
-
-    <div class="contact-page__form-cont form-cont">
-        <div class="form-cont__title-form title-form title-form_color-wrap"><h1>Send Us A Note</h1></div>
-        <div class="form-cont__input-name-email-phone-message-cont input-name-email-phone-message-cont_wrap">
-            <form>
-                <div><input class="input-name-email-phone-message-con__registration registration" type="text" placeholder="Name" /></div>
-                <div><input class="registration" type="email" placeholder="Email"/></div>
-                <div><input class="registration" type="number" placeholder="Phone"/></div>
-                <div><textarea class="registration-textarea" placeholder="Message"></textarea></div>
-                <div><input class="registration-button registration-button_bg-blue" type="button" name="submit" value="SUBMIT"/></div>
-            </form>
-        </div><!-- end of form-cont__input-name-email-phone-message-cont -->
-    </div><!-- end of contact-page__form-cont -->
-
-
-</div><!-- end of contact-page-->
-
-
-
-
-    <div class="navigation navigation_border-top">
-        <div class="navigation__title-nav title-nav title-nav_img-asentus"><img src="./img/logo-white.png"></div>
-    <div class="navigation__email-addres email-addres"><span class="email-addres_color-blue">Asentus</span> Powered by:<span class="email-addres_color-blue">KeenThemes.com</span></div>
-</div>
-</div>
-
-</body>
-
-
-</html>
+    <div class="main-paige main-paige_size-bg-color" id="about">
+        <div class="main-paige__feature-cont feature-cont feature-cont_margin-size">
+            <div class="feature-cont__feature feature">
+                <div class="feature__icon">
+                    <i class="fas fa-flask fa-feature"></i>
+                </div>
+                <div class="feature__title-feature title-feature">
+                    <h3>Art Of Coding
+                        <h3>
+                        </div>
+                        <div class="feature__desc-feature desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <i class="fas fa-tablet fa-feature"></i>
+                        </div>
+                        <div class="title-feature">
+                            <h3>Responsive Design</h3>
+                        </div>
+                        <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <i class="fas fa-medal fa-feature"></i>
+                        </div>
+                        <div class="title-feature">
+                            <h3>Feature Reach
+                                <h3>
+                                </div>
+                                <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">
+                                    <i class="fas fa-sticky-note fa-feature"></i>
+                                </div>
+                                <div class="title-feature">
+                                    <h3>Useful Documentation</h3>
+                                </div>
+                                <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">
+                                    <i class="fas fa-tachometer-alt fa-feature"></i>
+                                </div>
+                                <div class="title-feature">
+                                    <h3>Fast Delivery
+                                        <h3>
+                                        </div>
+                                        <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
+                                    </div>
+                                    <div class="feature">
+                                        <div class="feature__icon">
+                                            <i class="fas fa-medal fa-feature"></i>
+                                        </div>
+                                        <div>
+                                            <h3>Free Plugins
+                                                <h3>
+                                                </div>
+                                                <div class="desc-feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aperiam!</div>
+                                            </div>
+                                        </div>
+                                        <!-- end cont for icon Art of coding and etc -->
+                                    </div>
+                                    <!-- end main-paige main-paige_size-->
+                                    <div class="products-paige products-paige_size-wrap" id="products">
+                                        <div class="products-paige__latest-products latest-products latest-products_width-wrap">
+                                            <div class="latest-products__title-products title-products title-products_padding-bottom">
+                                                <h2>Latest Products</h2>
+                                            </div>
+                                            <div class="latest-products__desc-products desc-products">
+                                                <p class="desc-prod">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
+                                            </div>
+                                        </div>
+                                        <div class="products-paige__cont-with-products">
+                                            <div class="products-paige__products-img-title-desc products-img-title-desc">
+                                                <div class="products-img-title-desc__img-cont-products img-cont-products img-cont-products_bg-triangle-roof"></div>
+                                                <div class="products-img-title-desc__title-cont-products title-cont-products">
+                                                    <h3>Triangle Roof
+                                                        <h3>
+                                                        </div>
+                                                        <div class="products-img-title-desc__desc-cont-products desc-cont-products">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+                                                            <p class="desc-cont-products__read-more read-more">READ MORE</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="products-img-title-desc">
+                                                        <div class="products-img-title-desc__img-cont-products img-cont-products img-cont-products_bg-curved-corners"></div>
+                                                        <div class="products-img-title-desc__title-cont-products title-cont-products">
+                                                            <h3>Curved Corners</h3>
+                                                        </div>
+                                                        <div class="products-img-title-desc__desc-cont-products desc-cont-products">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+                                                            <p class="read-more">READ MORE</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="products-img-title-desc">
+                                                        <div class="products-img-title-desc__img-cont-products img-cont-products img-cont-products_bg-bird-on-green"></div>
+                                                        <div class="products-img-title-desc__title-cont-products title-cont-products">
+                                                            <h3>Bird On Green</h3>
+                                                        </div>
+                                                        <div class="products-img-title-desc__desc-cont-products desc-cont-products">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+                                                            <p class="read-more">READ MORE</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end products page -->
+                                            <div class="clients-page">
+                                                <div class="clients-page__pricing-cont pricing-cont pricing-cont-bg-wrap">
+                                                    <div class="pricing-cont__img-our-clients-discord img-our-clients  img-our-clients_bg-discord"></div>
+                                                    <div class="pricing-cont__img-our-clients-netflix img-our-clients  img-our-clients_bg-netflix"></div>
+                                                    <div class="pricing-cont__img-our-clients-broadcom img-our-clients  img-our-clients_bg-broadcom"></div>
+                                                    <div class="pricing-cont__img-our-clients-hoop img-our-clients  img-our-clients_bg-hoop"></div>
+                                                    <div class="pricing-cont__img-our-clients-airbnb img-our-clients  img-our-clients_bg-airbnb"></div>
+                                                </div>
+                                            </div>
+                                            <!-- end clients-page -->
+                                            <div class="clients-page__quote-clients quote-clients">
+                                                <div class="quote-clients__quote-cont quote-cont quote-cont_wrap">
+                                                    <div class="quote-cont__title-qoute title-quote title-quote title-quote_margin-left">
+                                                        <h2 class="title-quote_font-color-weight">Custom Reviews</h2>
+                                                    </div>
+                                                    <span class="quote-cont__fa-quote fa-quote fa-quote_bg">
+                                                        <i class="fas fa-quote-left"></i>
+                                                    </span>
+                                                    <p class="quote-cont__quote-desc-first quote-desc-first quote-desc-first_padding-top-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum aut nesciunt blanditiis, fugiat provident mollitia minima ex delectus libero ea incidunt modi dolorem sed, obcaecati harum dicta dolore officia praesentium et omnisvel.</p>
+                                                    <p class="quote-cont_quote-desc-second quote-desc-second quote-desc-second_padding-top-bottom">Soluta molestias repellat! Molestias dolore provident iure repellat incidunt blanditiis nobis totam sequi aliquid ipsa?</p>
+                                                    <div class="quote-desc__quote-author">
+                                                        <span class="quote-author_font-weight-color">Alex Clarson</span>,
+                                                        <span class="quote-author_color-gray">Metronic Customer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end of clients-page__quote-clients -->
+                                            <div class="pricing-page pricing-page_size" id="pricing">
+                                                <div class="pricing-page_pricing-cont pricing-cont pricing-cont_wrap-size-bg">
+                                                    <div class="pricing-cont__price price">
+                                                        <div class="price__icon">
+                                                            <i class="fas fa-flask fa-feature"></i>
+                                                        </div>
+                                                        <div class="price__title-price title-price">
+                                                            <h3>Starter Kit - $ 49</h3>
+                                                        </div>
+                                                        <div class="price__desc-price desc-price">
+                                                            <p class="desc-price-font-size">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor
+                                                                <p>
+                                                                </div>
+                                                                <div class="price__feature-price feature-price">
+                                                                    <p class="list"> - Basic Features</p>
+                                                                    <p class="list"> - Up to 5 products</p>
+                                                                    <p class="list"> - 50 Users Panels</p>
+                                                                </div>
+                                                                <div class="price__button-choose">
+                                                                    <button class="button-choose__button-choose-price button-choose-price">CHOOSE</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end cont -->
+                                                            <div class="pricing-cont__price price">
+                                                                <div class="price__icon">
+                                                                    <i class="fas fa-medal fa-feature"></i>
+                                                                </div>
+                                                                <div class="price__title-price title-price">
+                                                                    <h3>Professional - $ 149</h3>
+                                                                </div>
+                                                                <div class="price__desc-price desc-price">
+                                                                    <p class="desc-price-font-size">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor
+                                                                        <p>
+                                                                        </div>
+                                                                        <div class="price__feature-price feature-price">
+                                                                            <p class="price__list list"> - Basic Features</p>
+                                                                            <p class="list"> - Up to 100 products</p>
+                                                                            <p class="list"> - 100 Users Panels</p>
+                                                                        </div>
+                                                                        <div class="price__button-choose">
+                                                                            <button class="button-choose-price">CHOOSE</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end cont -->
+                                                                    <div class="pricing-cont__price price">
+                                                                        <div class="price__icon">
+                                                                            <i class="fas fa-tablet fa-feature"></i>
+                                                                        </div>
+                                                                        <div class="price__title-price title-price">
+                                                                            <h3>Advanced - $ 249</h3>
+                                                                        </div>
+                                                                        <div class="price__desc-price desc-price">
+                                                                            <p class="desc-price-font-size">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor
+                                                                                <p>
+                                                                                </div>
+                                                                                <div class="price__feature-price feature-price">
+                                                                                    <p class="list"> - Extended Features</p>
+                                                                                    <p class="list"> - Unlimited products</p>
+                                                                                    <p class="list"> - Unlimited Users Panels</p>
+                                                                                </div>
+                                                                                <div class="price__button-choose">
+                                                                                    <button class="button-choose-price">CHOOSE</button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- end cont -->
+                                                                        </div>
+                                                                        <!-- end of pricing-page_pricing-cont -->
+                                                                    </div>
+                                                                    <!-- end of pricing-page -->
+                                                                    <div class="sub-page-our-clients sub-page-our-clients_size-wrap">
+                                                                        <div class="sub-page-our-clients__cont-with-text-our-clients cont-with-text-our-clients cont-with-text-our-clients_wrap">
+                                                                            <div class="cont-with-text-our-clients__cont-for-text">
+                                                                                <div class="cont-with-text-our-clients__title-our-clients title-our-clients title-our-clients_padding-bottom">
+                                                                                    <h2>Our Clients
+                                                                                        <h2>
+                                                                                        </div>
+                                                                                        <div class="cont-with-text-our-clients__desc-our-clients-first-paragraph desc-our-clients-first-paragraph desc-our-clients-first-paragraph_padding-bottom">
+                                                                                            <p class="font-size-paragraph-our-clients">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation
+                                                                                                <p>
+                                                                                                </div>
+                                                                                                <div class="cont-with-text-our-clients__desc-our-clients-second-paragraph desc-our-clients-second-paragraph__padding-bottom">
+                                                                                                    <p class="font-size-paragraph-our-clients">Ipsum dolor sit amet consectetur adipiscing elit sed tempor incididut ut sead laboret dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="sub-page-our-clients__image-our-clients-cont image-our-clients-cont image-our-clients-cont_bg-image"></div>
+                                                                                    </div>
+                                                                                    <!-- end of sub-page-our-clients -->
+                                                                                    <div class="showcase-page showcase-page_size" id="image">
+                                                                                        <div class="showcase-page__cont-showcase-text cont-showcase-text cont-showcase-text_wrap">
+                                                                                            <div class="cont-showcase-text">
+                                                                                                <h2>Showcase</h2>
+                                                                                            </div>
+                                                                                            <div class="paragraph-showcase-block">
+                                                                                                <p class="cont-showcase-text__paragraph-showcase paragraph-showcase paragraph-showcase_padding-top">Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="showcase-page__all-block-cont-with-img all-block-cont-with-img_wrapper">
+                                                                                            <div class="showcase-page_cont-with-img-first cont-with-img-first cont-with-img-first_wrap">
+                                                                                                <div class="cont-with-img-first__image-first image-first image-first_size-image"></div>
+                                                                                                <div class="cont-with-img-first__block-with-img-second block-with-img-second block-with-img-second_size-wrap">
+                                                                                                    <div class="block-with-img-second__image-second image-second image-second_size-image"></div>
+                                                                                                    <div class="block-with-img-second__image-third image-third image-third-size-image"></div>
+                                                                                                </div>
+                                                                                            </div class="showcase-page_cont-with-img-second cont-with-img-second cont-with-img-second_size-image">
+                                                                                            <div class="cont-with-img-second__block-with-image-third block-with-image-third block-with-image-third_size">
+                                                                                                <div class="block-with-image-third__image-fourth third__image-fourth-size-image"></div>
+                                                                                                <div class="block-with-image-third__image-fifth image-fifth-size-image"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- end of showcase-page -->
+                                                                                    <div class="footer-page footer-page_bg" id="contact">
+                                                                                        <div class="contact-page contact-page_size-bg">
+                                                                                            <div class="contact-page__navigation-link-cont navigation-link-cont navigation-link-cont_wrap">
+                                                                                                <div class="navigation-link-cont__navbar-column navbar-column navbar-column_text-nav-and-padding">
+                                                                                                    <div>Home</div>
+                                                                                                    <div>About</div>
+                                                                                                    <div>Products</div>
+                                                                                                    <div>Pricing</div>
+                                                                                                    <div>Clients</div>
+                                                                                                    <div>Careers</div>
+                                                                                                    <div>Contact</div>
+                                                                                                    <div>Terms</div>
+                                                                                                </div>
+                                                                                                <div class="navigation-link-cont__social-net-column social-net-column social-net-column_text-soc-net-wrap">
+                                                                                                    <div>Twitter</div>
+                                                                                                    <div>Facebook</div>
+                                                                                                    <div>Instagram</div>
+                                                                                                    <div>YouTube</div>
+                                                                                                </div>
+                                                                                                <!-- end of navigation-link-cont__social-net-column -->
+                                                                                            </div>
+                                                                                            <!-- end of contact-page__navigation-link-cont -->
+                                                                                            <div class="contact-page__form-cont form-cont">
+                                                                                                <div class="form-cont__title-form title-form title-form_color-wrap">
+                                                                                                    <h1>Send Us A Note</h1>
+                                                                                                </div>
+                                                                                                <div class="form-cont__input-name-email-phone-message-cont input-name-email-phone-message-cont_wrap">
+                                                                                                    <form>
+                                                                                                        <div>
+                                                                                                            <input class="input-name-email-phone-message-con__registration registration" type="text" placeholder="Name">
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                            <input class="registration" type="email" placeholder="Email">
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                            <input class="registration" type="number" placeholder="Phone">
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                            <textarea class="registration-textarea" placeholder="Message"></textarea>
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                            <input
+                                                                                                                class="registration-button registration-button_bg-blue"
+                                                                                                                type="button"
+                                                                                                                name="submit"
+                                                                                                                value="SUBMIT"
+                                                                                                            >
+                                                                                                        </div>
+                                                                                                    </form>
+                                                                                                </div>
+                                                                                                <!-- end of form-cont__input-name-email-phone-message-cont -->
+                                                                                            </div>
+                                                                                            <!-- end of contact-page__form-cont -->
+                                                                                        </div>
+                                                                                        <!-- end of contact-page-->
+                                                                                        <div class="navigation navigation_border-top">
+                                                                                            <div class="navigation__title-nav title-nav title-nav_img-asentus">
+                                                                                                <img src="./img/logo-white.png">
+                                                                                            </div>
+                                                                                            <div class="navigation__email-addres email-addres">
+                                                                                                <span class="email-addres_color-blue">Asentus</span> Powered by:
+                                                                                                <span class="email-addres_color-blue">KeenThemes.com</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </body>
+                                                                            </html>
