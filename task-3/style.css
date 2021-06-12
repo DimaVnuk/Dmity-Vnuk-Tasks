@@ -10,10 +10,7 @@ html {
 }
 
 .preloader {
- position: absolute; 
-  left:10px;
-  z-index: 3;
-}
+
 
 .fa-redo-alt {
     animation-name: loadTransform;
