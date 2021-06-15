@@ -1,0 +1,36 @@
+.pricing-page_size {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+}
+
+.pricing-cont_wrap-size-bg {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.price {
+    width: 350px;
+    height: 500px;
+    padding: 50px 0 0 30px;
+}
+
+.title-price {
+    padding-top: 30px;
+}
+
+.desc-price {
+    padding-top: 30px;
+}
+
+.feature-price {
+    padding-top: 30px;
+    margin-bottom: 60px;
+}

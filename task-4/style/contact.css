@@ -1,0 +1,86 @@
+.contact-page_size-bg {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-page_bg {
+    background: url("../img/1920x1080/03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-page__navigation-link-cont {
+    width: 350px;
+    height: 450px;
+    position: relative;
+    left: 100px;
+}
+
+.navigation-link-cont_wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 50px;
+}
+
+.registration-textarea {
+    width: 450px;
+    height: 130px;
+    background: rgba(0, 0, 0, .15);
+    border: none;
+    margin-top: 15px;
+}
+
+.registration-button {
+    width: 100px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.navbar-column_text-nav-and-padding {
+    font-size: 16px;
+    font-weight: 500;
+    color: #cbd3e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-net-column_text-soc-net-wrap {
+    font-size: 16px;
+    font-weight: 500;
+    color: #cbd3e1;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-name-email-phone-message-cont_wrap {
+    position: relative;
+    right: 140px;
+}
+
+.title-form_color-wrap {
+    position: relative;
+    right: 140px;
+    color: #fff;
+}
+
+.navigation_border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navigation__email-addres {
+    width: 500px;
+    text-align: end;
+}
+
+.registration-button {
+    background: #17bed2;
+    color: white;
+    border: none;
+}
