@@ -16,7 +16,7 @@
         height: 160px;
     }
 
-}
+
 
 @media only screen and (max-width:1289px) {
     .desc-text {
@@ -47,7 +47,7 @@
         width: 320px;
     }
 
-}
+
 
 @media only screen and (max-width:1019px) {
     .desc-text {
@@ -139,11 +139,12 @@
         width: 180px;
         height: 180px;
 
+
     .copyright_text-align {
         font-size: 0.7rem;
     }
 
-}
+
 
 @media only screen and (max-width:746px) {
     .desc-image {
@@ -316,6 +317,7 @@
     }
 
 
+
 @media only screen and (max-width:359px) {
     .desc-image {
         width: 210px;
@@ -346,3 +348,4 @@
     .copyright_text-align {
         font-size: 0.6rem;
     }
+
