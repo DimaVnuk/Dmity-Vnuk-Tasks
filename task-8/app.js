@@ -505,14 +505,59 @@ class Tree {
 
 const tree = new Tree(flatList, rootId);
 
-let testId = "33f32215-9f09-424d-a43c-9955c5f80c88";
+/* let testId = "33f32215-9f09-424d-a43c-9955c5f80c88";
 tree.createNode("56565655", testId, { by: 99 });
-const test = tree.getNodeById(testId);
+const test = tree.getNodeById(testId); */
 //console.log(test);
-tree.updateNodeById(testId, { len: 88 });
+/* tree.updateNodeById(testId, { len: 88 });
 console.log("x");
-console.log(test.children);
+console.log(test.children); */
 //tree.deleteNodeById(testId);
-console.log(tree.state);
-console.log(tree.getSiblings(testId));
+/* console.log(tree.state);
+console.log(tree.getSiblings(testId)); */
 //console.log(tree.getParent('c24cf51e-7c6c-47d8-a56f-8d11fc7765e7'));
+
+
+
+
+//quickSort
+
+const swap = (arr, leftIndex, rightIndex) => {
+   let temp = arr[leftIndex];
+   arr[leftIndex] = arr[rightIndex];
+   arr[rightIndex] = temp;
+};
+const divide = (arr, left, right) => {
+   let pivot = arr[Math.floor((right + left) / 2)];
+   let i = left;
+   let j = right;
+   while (i <= j) {
+      while (arr[i] < pivot) {
+         i++;
+      };
+      while (arr[j] > pivot) {
+         j--;
+      };
+      if (i <= j) {
+         swap(arr, i, j); 
+         i++;
+         j--;
+      };
+   };
+   return i;
+}
+const quickSort = (arr, left = 0, right = arr.length - 1) => {
+   let index;
+   if (arr.length > 1) {
+      index = divide(arr, left, right);
+      if (left < index - 1) {
+         quickSort(arr, left, index - 1);
+      };
+      if (index < right) {
+         quickSort(arr, index, right);
+      };
+   }
+   return arr;
+}
+let sortedArray = quickSort([3,4,16,2,1]);
+console.log(sortedArray)
