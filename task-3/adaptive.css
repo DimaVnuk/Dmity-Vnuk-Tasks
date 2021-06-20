@@ -46,7 +46,6 @@
         width: 320px;
     }
 
-
 @media only screen and (max-width:1019px) {
     .desc-text {
         width: 310px;
@@ -367,5 +366,6 @@
     .copyright_text-align {
         font-size: 0.6rem;
     }
+
 
   
