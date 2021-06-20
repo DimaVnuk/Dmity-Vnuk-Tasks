@@ -425,7 +425,7 @@ class Tree {
     };
   }
 
-  generateChildrenForId(id, data) {
+  generateChildrenForId(id, data) { 
     let res = [];
     data.map((a) => {
       if (a.parent_id === id) {
@@ -438,7 +438,7 @@ class Tree {
     });
     return res;
   }
-  getNodeByIdSlow(id) {
+  getNodeByIdSlow(id) { //O(n)
     const search = (wood, target) => {
       if (wood.id === id) {
         return wood;
@@ -454,7 +454,7 @@ class Tree {
     };
     return search(this.state, id);
   }
-  getNodeById(id) {
+  getNodeById(id) { // O(n)
     const stack = [this.state];
 
     while (stack.length) {
@@ -468,13 +468,13 @@ class Tree {
     }
     return null;
   }
-  updateNodeById(id, updatedProperties) {
+  updateNodeById(id, updatedProperties) { // O(n)
     let curr = this.getNodeById(id);
     for (let prop in updatedProperties) {
       curr[prop] = updatedProperties[prop];
     }
   }
-  createNode(id, parent_id, newNode) {
+  createNode(id, parent_id, newNode) { // O(n)
     if (this.getNodeById(id)) {
       throw "custom error";
     }
@@ -485,7 +485,7 @@ class Tree {
       ...newNode,
     });
   }
-  deleteNodeById(id) {
+  deleteNodeById(id) { // O(n)
     let curr = this.getNodeById(id);
     let par = this.getNodeById(curr.parent_id);
     const index = par.children.indexOf(curr);
@@ -493,12 +493,12 @@ class Tree {
       par.children.splice(index, 1);
     }
   }
-  getParent(id) {
+  getParent(id) { // O(n)
     let curr = this.getNodeById(id);
     let par = this.getNodeById(curr.parent_id);
     return par;
   }
-  getSiblings(id) {
+  getSiblings(id) { // O(n)
     return this.getNodeById(id).children;
   }
 }
