@@ -438,77 +438,81 @@ class Tree {
     });
     return res;
   }
-}
+  getNodeByIdSlow(id) {
+    const search = (wood, target) => {
+      if (wood.id === id) {
+        return wood;
+      }
 
-const tree = new Tree(flatList, rootId);
-console.log(tree);
+      for (const child of wood.children) {
+        const res = search(child, target);
 
-tree.getNodeById = function (id) {
-  const stack = [this.state];
-
-  while (stack.length) {
-    const curr = stack.pop();
-
-    if (curr.id === id) {
-      return curr;
-    }
-
-    stack.push(...curr.children);
+        if (res) {
+          return res;
+        }
+      }
+    };
+    return search(this.state, id);
   }
-};
+  getNodeById(id) {
+    const stack = [this.state];
 
-console.log(tree.getNodeById("894c0544-991f-4508-ab71-d0959ae1aa53"));
+    while (stack.length) {
+      const curr = stack.pop();
 
+      if (curr.id === id) {
+        return curr;
+      }
 
-tree.updateNodeById = function (id, updatedProperties) {
-    let curr=this.getNodeById(id);
-    for( let prop in updatedProperties){
-     curr[prop]=updatedProperties[prop];
+      stack.push(...curr.children);
     }
-    
-}
-/* console.log(tree.updateNodeById("fa145b9d-1a14-4aa7-ac6f-9e148fa39f74",{parent_id:1})); */
-
-
-
-tree.createNode = function (id, parent_id, newNode) {
+    return null;
+  }
+  updateNodeById(id, updatedProperties) {
+    let curr = this.getNodeById(id);
+    for (let prop in updatedProperties) {
+      curr[prop] = updatedProperties[prop];
+    }
+  }
+  createNode(id, parent_id, newNode) {
+    if (this.getNodeById(id)) {
+      throw "custom error";
+    }
     let par = this.getNodeById(parent_id);
     par.children.push({
-     id,
-     parent_id,
-     ...newNode
+      id,
+      parent_id,
+      ...newNode,
     });
-}
-
-/* console.log(tree.createNode("56565655", '5ce7fedf-cd6c-499a-b688-d2d98ca96b04', {by: 99})); */
-
-
-
-
-tree.deleteNodeById = function(id) {
+  }
+  deleteNodeById(id) {
     let curr = this.getNodeById(id);
     let par = this.getNodeById(curr.parent_id);
     const index = par.children.indexOf(curr);
     if (index > -1) {
-    par.children.splice(index, 1);
+      par.children.splice(index, 1);
     }
-}
-
-/* console.log(tree.deleteNodeById("5ce7fedf-cd6c-499a-b688-d2d98ca96b04")); */
-
-
-tree.getParent = function(id) {
+  }
+  getParent(id) {
     let curr = this.getNodeById(id);
     let par = this.getNodeById(curr.parent_id);
     return par;
+  }
+  getSiblings(id) {
+    return this.getNodeById(id).children;
+  }
 }
 
+const tree = new Tree(flatList, rootId);
 
- /* console.log(tree.getParent("5ce7fedf-cd6c-499a-b688-d2d98ca96b04")); */ 
-
-tree.getSiblings = function(id) {
-    return this.getNodeById(id).children;
-   }
-
-/* console.log(tree.getSiblings('fa145b9d-1a14-4aa7-ac6f-9e148fa39f74')) */
-
+let testId = "33f32215-9f09-424d-a43c-9955c5f80c88";
+tree.createNode("56565655", testId, { by: 99 });
+const test = tree.getNodeById(testId);
+//console.log(test);
+tree.updateNodeById(testId, { len: 88 });
+console.log("x");
+console.log(test.children);
+//tree.deleteNodeById(testId);
+console.log(tree.state);
+console.log(tree.getSiblings(testId));
+//console.log(tree.getParent('c24cf51e-7c6c-47d8-a56f-8d11fc7765e7'));
