@@ -40,6 +40,7 @@
     .desc-text {
         width: 320px;
     }
+}
 
 }
 @media only screen and (max-width:1019px) {
@@ -54,11 +55,6 @@
     }
 }
 
-@media only screen and (max-width:979px) {
-    .desc-text {
-        width: 270px;
-    }
-}
 
 @media only screen and (max-width:979px) {
     .desc-text {
@@ -93,6 +89,7 @@
         font-size: 0.8rem;
     }
 }
+
 
 
 @media only screen and (max-width:799px) {
@@ -219,33 +216,7 @@
 
 
 
-@media only screen and (max-width:524px) {
-    .desc-image {
-        width: 120px;
-        height: 120px;
-    }
-    .desc-text {
-        width: 100px;
-        font-size: 0.8rem;
-    }
-    .main-page{
-        width: 100%;
-    }
-}
 
-@media only screen and (max-width:492px) and (min-width:480px) {
-    .desc-image {
-
-        height: 115px;
-    }
-    .desc-text {
-        width: 90px;
-
-    }
-    .main-paige__description {
-        height: 600px;
-    }
-}
 
 @media only screen and (max-width:479px) {
     .navbar_navigator {
@@ -302,12 +273,6 @@
     }
 }
 
-@media only screen and (max-width:388px) {
-    .desc-image {
-        width: 230px;
-        height: 230px;
-    }
-}
 
 
 @media only screen and (max-width:369px) {
@@ -326,12 +291,7 @@
   
 }
 
-@media only screen and (max-width:349px) {
-    .desc-image {
-        width: 200px;
-        height: 200px;
-    }
-}
+
 
 @media only screen and (max-width:339px) {
     .desc-image {
@@ -350,4 +310,4 @@
     }
 }
 
-  
+
