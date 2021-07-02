@@ -18,11 +18,12 @@ const renderCalendar = () => {
   ).getDate();
 
   const firstDayIndex = date.getDay();
-  
+
   const lastDayIndex = new Date(
     date.getFullYear(),
-    date.getMonth() 
-  ).getDay()-1;
+    date.getMonth()/*  + 1,
+    0 */
+  ).getDay();
 
   const nextDays = 7 - lastDayIndex - 1;
 
@@ -57,12 +58,11 @@ const renderCalendar = () => {
       date.getMonth() === new Date().getMonth()
     ) {
       days += `<div class="today">${i}</div>`;
-      
     } else {
       days += `<div>${i}</div>`;
     }
   }
-  
+
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
@@ -81,4 +81,10 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderCalendar();
 
-
+configWindow.hidden = true;
+config.addEventListener('click',()=>{
+    configWindow.hidden = false
+})
+iconClose.addEventListener('click',()=>{
+    configWindow.hidden = true
+})
