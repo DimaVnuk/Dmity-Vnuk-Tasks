@@ -21,11 +21,11 @@ const renderCalendar = () => {
 
   const lastDayIndex = new Date(
     date.getFullYear(),
-    date.getMonth()/*  + 1,
-    0 */
+    date.getMonth() + 1,
+   1
   ).getDay();
 
-  const nextDays = 7 - lastDayIndex - 1;
+  const nextDays = 7 - lastDayIndex /* - 1 */;
 
   const months = [
     "January",
@@ -81,10 +81,5 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderCalendar();
 
-configWindow.hidden = true;
-config.addEventListener('click',()=>{
-    configWindow.hidden = false
-})
-iconClose.addEventListener('click',()=>{
-    configWindow.hidden = true
-})
+
+
