@@ -135,3 +135,13 @@ display: none;
 }
 
 
+.fa-times-circle{
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.change-first-day{
+  font-size: 15px;
+}

@@ -1,9 +1,10 @@
-
+configWindow.hidden = true
 config.addEventListener("click", () => {
     
-  if (configWindow.style.display == "none") {
-    configWindow.style.display = "block";
-  } else {
-    configWindow.style.display = "none";
-  }
+  configWindow.hidden = false
+});
+
+iconClose.addEventListener("click", () => {
+  
+  configWindow.hidden = true
 });
