@@ -7,40 +7,53 @@
         <title>Document</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Festive&family=Indie+Flower&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script defer src="app.js"></script>
         <script defer src="config.js"></script>
-    </head>
     <body>
         <div class="container">
             <div class="calendar">
               <div class="month">
                 <i class="fas fa-angle-left prev"></i>
                 <div class="date">
-                  <h1></h1>
-                  <p></p>
+                  <h1 class="date-color"></h1>
+                  <p class="date-color"></p>
                 </div>
                 <i class="fas fa-angle-right next"></i>
               </div>
               <div class="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
               </div>
               <div class="days"></div>
               <div class="calendar__config config" id="config">Configuration</div>
               <div class="config__config-window" id="configWindow">
                 <i class="far fa-times-circle" id="iconClose"></i>
-                <p class="change-first-day">Enter your first day</p>
+                <p class="change-first-day" id="hideInactiveDays">Hide inactive days of the month</p>
+                <p class="change-first-day" id="showInactiveDays">Show inactive days of the month</p>
+                <p class="change-first-day" id="startWithMon">Start week with monday</p>
               </div>
             </div>
-            
           </div>
-          
+          <div id="newEventModal">
+            <h2 class="title-modal-wind">New Event</h2>
+      
+            <input id="eventTitleInput" placeholder="Event Title" />
+      
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+          </div>
+      
+          <div id="deleteEventModal">
+            <h2>Event</h2>
+      
+            <p id="eventText"></p>
+      
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+          </div>
+          <div id="modalBackDrop"></div>
     </body>
 </html>
