@@ -106,7 +106,7 @@ html {
 .days div:nth-child(7n+1){
   border: 1px solid gray;
 }
-.days div:nth-child(7n+8):not(.today){
+.days div:nth-child(7n+7):not(.today){
   border: 1px solid gray;
 }
 

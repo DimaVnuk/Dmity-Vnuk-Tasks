@@ -269,9 +269,8 @@ for (let r = firstDayIndex; r > 0; r--) {
   }
 
 
-  if(monHoliday.checked ){
+  if(monHoliday.checked){
     monthDays.innerHTML = daysMonHol;
-    
   } 
   if(tueHoliday.checked){
     monthDays.innerHTML = daysTueHol;
