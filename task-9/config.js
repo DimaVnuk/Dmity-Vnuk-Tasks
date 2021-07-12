@@ -1,24 +1,16 @@
 const prevDay = document.getElementsByClassName("prev-date");
 const nextDay = document.getElementsByClassName("next-date");
+const wdScreen = document.querySelector('.container')
 
 function inactivePrevDays() {
   hideInactiveDays.addEventListener("click", () => {
-    for (let i = 0; i < prevDay.length; i++) {
-      prevDay[i].style.opacity = "0";
-    }
-    for (let j = 0; j < nextDay.length; j++) {
-      nextDay[j].style.opacity = "0";
-    }
-  });
-  showInactiveDays.addEventListener("click", () => {
-    for (let i = 0; i < prevDay.length; i++) {
-      prevDay[i].style.opacity = "0.5";
-    }
-    for (let j = 0; j < nextDay.length; j++) {
-      nextDay[j].style.opacity = "0.5";
-    }
+    renderCalendar()
   });
 }
+
+startWithMon.addEventListener("change", () => {
+  renderCalendar();
+});
 
 monthDays.addEventListener("click", () =>
   openModal(`${month + 1}/ ${day}/ ${year}`)
@@ -73,11 +65,31 @@ function configOpen() {
     iconClose.addEventListener("click", () => {
       configWindow.hidden = true;
     });
-  
+
     document.getElementById("saveButton").addEventListener("click", saveEvent);
     document.getElementById("cancelButton").addEventListener("click", closeModal);
   }
 
+function openWeather(){
+  
+  openWeatherPanel.addEventListener('click', () =>{
+    contWeatherApi.style.display ='flex';
+    iconCloseWeather.style.display = 'block'
+    
+  })
+
+
+
+  iconCloseWeather.addEventListener('click', () => {
+    contWeatherApi.style.display = 'none';
+    iconCloseWeather.style.display = 'none'
+  })
+}
+
+
+
+
+openWeather();
 inactivePrevDays();
 configOpen();
 initButtons();
