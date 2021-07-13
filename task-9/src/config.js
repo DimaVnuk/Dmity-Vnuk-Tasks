@@ -1,6 +1,4 @@
-const prevDay = document.getElementsByClassName("prev-date");
-const nextDay = document.getElementsByClassName("next-date");
-const wdScreen = document.querySelector('.container')
+
 
 function inactivePrevDays() {
   hideInactiveDays.addEventListener("click", () => {
@@ -8,14 +6,17 @@ function inactivePrevDays() {
   });
 }
 
+function startMonday(){
 startWithMon.addEventListener("change", () => {
   renderCalendar();
 });
+}
 
+function chooseDay(){
 monthDays.addEventListener("click", () =>
   openModal(`${month + 1}/ ${day}/ ${year}`)
 );
-
+}
 
 function initButtons() {
     document.querySelector(".prev").addEventListener("click", () => {
@@ -78,17 +79,38 @@ function openWeather(){
     
   })
 
-
-
-  iconCloseWeather.addEventListener('click', () => {
+iconCloseWeather.addEventListener('click', () => {
     contWeatherApi.style.display = 'none';
     iconCloseWeather.style.display = 'none'
   })
 }
 
 
+function chooseHoliday(){
+  monHoliday.addEventListener('change',()=>{
+    renderCalendar()
+  })
+  
+  tueHoliday.addEventListener('change',()=>{
+    renderCalendar()
+  })
+  
+  wedHoliday.addEventListener('change',()=>{
+    renderCalendar()
+  })
+  
+  thuHoliday.addEventListener('change',()=>{
+    renderCalendar()
+  })
+  
+  friHoliday.addEventListener('change',()=>{
+    renderCalendar()
+  })
+  }
 
-
+chooseHoliday()
+chooseDay()
+startMonday()
 openWeather();
 inactivePrevDays();
 configOpen();

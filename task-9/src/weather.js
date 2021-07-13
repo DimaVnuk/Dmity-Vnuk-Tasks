@@ -1,9 +1,8 @@
 const API_KEY = '9ad87bd97cf062943c727a11f4096436'
 
 
-/* api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key} */
 
-
+function weatherFiveDay(){
 fetch('https://api.openweathermap.org/data/2.5/forecast?id=625073&appid=9ad87bd97cf062943c727a11f4096436')
 .then(function(resp){return resp.json()})
 .then(function(data){
@@ -36,5 +35,6 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?id=625073&appid=9ad87bd9
 .catch(function(){
 //error
 })
+}
 
-
+weatherFiveDay()

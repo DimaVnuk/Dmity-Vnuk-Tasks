@@ -1,5 +1,8 @@
 let nav = 0;
 let clicked = null;
+const prevDay = document.getElementsByClassName("prev-date");
+const nextDay = document.getElementsByClassName("next-date");
+const wdScreen = document.querySelector('.container')
 let events = localStorage.getItem("events")
   ? JSON.parse(localStorage.getItem("events"))
   : [];
@@ -43,8 +46,6 @@ function renderCalendar() {
     0
   ).getDate(); //daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  console.log(lastDay);
-
   const prevLastDay = new Date(
     date.getFullYear(),
     date.getMonth(),
@@ -82,7 +83,7 @@ function renderCalendar() {
 
   document.querySelector(".date p").innerHTML = new Date().toDateString(); // get current day, months, day, year
 
-  let Weak = "";
+  let weak = "";
   let days = "";
   let newWeak = "";
   let newDays = "";
@@ -126,7 +127,7 @@ for (let r = firstDayIndex; r > 0; r--) {
 }
   // weak
   for (let k = 0; k < dayOfWeak.length; k++) {
-    Weak += `<div>${dayOfWeak[k]}</div>`;
+    weak += `<div>${dayOfWeak[k]}</div>`;
  }
   for (let a = 0; a < dayOfWeakStartWithMon.length; a++) {
     newWeak += `<div>${dayOfWeakStartWithMon[a]}</div>`;
@@ -248,7 +249,7 @@ for (let r = firstDayIndex; r > 0; r--) {
     weakDays.innerHTML = newWeak;
     monthDays.innerHTML = newDays;
   } else {
-    weakDays.innerHTML = Weak;
+    weakDays.innerHTML = weak;
     monthDays.innerHTML = days;
   }
 
@@ -287,24 +288,3 @@ for (let r = firstDayIndex; r > 0; r--) {
   
 }
 
-/* const holiday = divWithDate.getElementsByClassName("click-div");
-console.log(holiday) */
-monHoliday.addEventListener('change',()=>{
-  renderCalendar()
-})
-
-tueHoliday.addEventListener('change',()=>{
-  renderCalendar()
-})
-
-wedHoliday.addEventListener('change',()=>{
-  renderCalendar()
-})
-
-thuHoliday.addEventListener('change',()=>{
-  renderCalendar()
-})
-
-friHoliday.addEventListener('change',()=>{
-  renderCalendar()
-})
