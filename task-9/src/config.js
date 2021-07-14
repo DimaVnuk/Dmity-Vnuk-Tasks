@@ -1,5 +1,20 @@
 
 
+
+function openModal(dt) {
+  clicked = dt;
+
+  const eventForDay = events.find((e) => e.dt === clicked);
+
+  if (eventForDay) {
+    document.getElementById("eventText").innerText = eventForDay.title;
+    deleteEventModal.style.display = "block";
+  } else {
+    newEventModal.style.display = "block";
+  }
+  backDrop.style.display = "block";
+}
+
 function inactivePrevDays() {
   hideInactiveDays.addEventListener("click", () => {
     renderCalendar()
@@ -115,4 +130,5 @@ openWeather();
 inactivePrevDays();
 configOpen();
 initButtons();
+weatherFiveDay()
 renderCalendar();
