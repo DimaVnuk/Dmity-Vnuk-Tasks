@@ -1,34 +1,45 @@
-import style from './style.css';
+/* import * as $ from 'jquery' */
+/* import xml from './assets/' */
+/* import csv from './assets/' */
+/* import "./style.css"; */
+import "./style.scss";
 
-let nav = 0;
 let clicked = null;
 const prevDay = document.getElementsByClassName("prev-date");
 const nextDay = document.getElementsByClassName("next-date");
-const wdScreen = document.querySelector('.container')
+
 let events = localStorage.getItem("events")
   ? JSON.parse(localStorage.getItem("events"))
   : [];
-const divWithDate = document.getElementById("div-date")
+
 const newEventModal = document.getElementById("newEventModal");
 const backDrop = document.getElementById("modalBackDrop");
 const monthDays = document.querySelector(".days");
 const weakDays = document.querySelector(".weakDays");
-const holiday = document.getElementsByClassName("click-div");
-const eventTitle = document.getElementById("eventTitleInput");
-const startWeak = document.getElementById("startWithMon");
+
 const dayOfWeak = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const dayOfWeakStartWithMon = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const date = new Date();
-/* const day = date.getDate();
+const day = date.getDate();
 const month = date.getMonth();
 const year = date.getFullYear();
-let weak = ""; */
 
+function openModal(dt) {
+  clicked = dt;
 
+  const eventForDay = events.find((e) => e.dt === clicked);
 
-function  renderCalendar  ()  {
+  if (eventForDay) {
+    document.getElementById("eventText").innerText = eventForDay.title;
+    deleteEventModal.style.display = "block";
+  } else {
+    newEventModal.style.display = "block";
+  }
+  backDrop.style.display = "block";
+}
+function renderCalendar() {
   date.setDate(1);
- 
+
   const lastDay = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
@@ -76,11 +87,11 @@ function  renderCalendar  ()  {
   let days = "";
   let newWeak = "";
   let newDays = "";
-  let daysMonHol = ''
-  let daysTueHol = ''
-  let daysWedHol = ''
-  let daysThuHol = ''
-  let daysFriHol = ''
+  let daysMonHol = "";
+  let daysTueHol = "";
+  let daysWedHol = "";
+  let daysThuHol = "";
+  let daysFriHol = "";
   // prev days
   for (let x = firstDayIndex; x > 0; x--) {
     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
@@ -93,31 +104,30 @@ function  renderCalendar  ()  {
   }
   // end new prev days
 
+  // new prev days
+  for (let h = firstDayIndex; h > 0; h--) {
+    daysMonHol += `<div class="prev-date">${prevLastDay - h + 1}</div>`;
+  }
+  // end new prev days
+  for (let q = firstDayIndex; q > 0; q--) {
+    daysTueHol += `<div class="prev-date">${prevLastDay - q + 1}</div>`;
+  }
 
- // new prev days
- for (let h = firstDayIndex; h > 0; h--) {
-  daysMonHol += `<div class="prev-date">${prevLastDay - h + 1}</div>`;
-}
-// end new prev days
-for (let q = firstDayIndex; q > 0; q--) {
-  daysTueHol += `<div class="prev-date">${prevLastDay - q + 1}</div>`;
-}
+  for (let w = firstDayIndex; w > 0; w--) {
+    daysWedHol += `<div class="prev-date">${prevLastDay - w + 1}</div>`;
+  }
 
-for (let w = firstDayIndex; w > 0; w--) {
-  daysWedHol += `<div class="prev-date">${prevLastDay - w + 1}</div>`;
-}
+  for (let e = firstDayIndex; e > 0; e--) {
+    daysThuHol += `<div class="prev-date">${prevLastDay - e + 1}</div>`;
+  }
 
-for (let e = firstDayIndex; e > 0; e--) {
-  daysThuHol += `<div class="prev-date">${prevLastDay - e + 1}</div>`;
-}
-
-for (let r = firstDayIndex; r > 0; r--) {
-  daysFriHol += `<div class="prev-date">${prevLastDay - r + 1}</div>`;
-}
+  for (let r = firstDayIndex; r > 0; r--) {
+    daysFriHol += `<div class="prev-date">${prevLastDay - r + 1}</div>`;
+  }
   // weak
   for (let k = 0; k < dayOfWeak.length; k++) {
     weak += `<div>${dayOfWeak[k]}</div>`;
- }
+  }
   for (let a = 0; a < dayOfWeakStartWithMon.length; a++) {
     newWeak += `<div>${dayOfWeakStartWithMon[a]}</div>`;
   }
@@ -147,7 +157,7 @@ for (let r = firstDayIndex; r > 0; r--) {
       newDays += `<div class = 'click-div'>${p}</div>`;
     }
   }
-  //end new current day 
+  //end new current day
 
   // new current day mon
   for (let z = 1; z <= lastDay; z++) {
@@ -201,8 +211,7 @@ for (let r = firstDayIndex; r > 0; r--) {
     }
   }
 
-// end new current day mon
-
+  // end new current day mon
 
   // next days
   for (let j = 1; j <= nextDays; j++) {
@@ -258,195 +267,189 @@ for (let r = firstDayIndex; r > 0; r--) {
     }
   }
 
-
-  if(monHoliday.checked){
+  if (monHoliday.checked) {
     monthDays.innerHTML = daysMonHol;
-  } 
-  if(tueHoliday.checked){
-    monthDays.innerHTML = daysTueHol;
-  } 
-  if(wedHoliday.checked){
-    monthDays.innerHTML = daysWedHol;
-  } 
-  if(thuHoliday.checked){
-    monthDays.innerHTML = daysThuHol;
-  } 
-  if(friHoliday.checked){
-    monthDays.innerHTML = daysFriHol;
-  } 
-  
-}
-
-/* export default renderCalendar */
-
-
-
-function openModal(dt) {
-  clicked = dt;
-
-  const eventForDay = events.find((e) => e.dt === clicked);
-
-  if (eventForDay) {
-    document.getElementById("eventText").innerText = eventForDay.title;
-    deleteEventModal.style.display = "block";
-  } else {
-    newEventModal.style.display = "block";
   }
-  backDrop.style.display = "block";
+  if (tueHoliday.checked) {
+    monthDays.innerHTML = daysTueHol;
+  }
+  if (wedHoliday.checked) {
+    monthDays.innerHTML = daysWedHol;
+  }
+  if (thuHoliday.checked) {
+    monthDays.innerHTML = daysThuHol;
+  }
+  if (friHoliday.checked) {
+    monthDays.innerHTML = daysFriHol;
+  }
 }
 
 function inactivePrevDays() {
   hideInactiveDays.addEventListener("click", () => {
-    renderCalendar()
+    renderCalendar();
   });
 }
 
-function startMonday(){
-startWithMon.addEventListener("change", () => {
-  renderCalendar();
-});
+function startMonday() {
+  startWithMon.addEventListener("change", () => {
+    renderCalendar();
+  });
 }
 
-function chooseDay(){
 monthDays.addEventListener("click", () =>
   openModal(`${month + 1}/ ${day}/ ${year}`)
 );
-}
 
 function initButtons() {
-    document.querySelector(".prev").addEventListener("click", () => {
-      date.setMonth(date.getMonth() - 1);
-      renderCalendar();
-    });
-  
-    document.querySelector(".next").addEventListener("click", () => {
-      date.setMonth(date.getMonth() + 1);
-      renderCalendar();
-    });
-  }
-  
-  
-  
-function closeModal() {
-    newEventModal.style.display = "none";
-    backDrop.style.display = "none";
-    eventTitleInput.value = "";
-    clicked = null;
+  document.querySelector(".prev").addEventListener("click", () => {
+    date.setMonth(date.getMonth() - 1);
     renderCalendar();
-  }
-  
-  
-function saveEvent() {
-    if (eventTitleInput.value) {
-      eventTitleInput.classList.remove("error");
-  
-      events.push({
-        date: clicked,
-        title: eventTitleInput.value,
-      });
-  
-      localStorage.setItem("events", JSON.stringify(events));
-      closeModal();
-    } else {
-      eventTitleInput.classList.add("error");
-    }
-  }
-  
-function configOpen() {
-    configWindow.hidden = true;
-    config.addEventListener("click", () => {
-      configWindow.hidden = false;
-    });
-  
-    iconClose.addEventListener("click", () => {
-      configWindow.hidden = true;
-    });
+  });
 
-    document.getElementById("saveButton").addEventListener("click", saveEvent);
-    document.getElementById("cancelButton").addEventListener("click", closeModal);
-  }
-
-function openWeather(){
-  
-  openWeatherPanel.addEventListener('click', () =>{
-    contWeatherApi.style.display ='flex';
-    iconCloseWeather.style.display = 'block'
-    
-  })
-
-iconCloseWeather.addEventListener('click', () => {
-    contWeatherApi.style.display = 'none';
-    iconCloseWeather.style.display = 'none'
-  })
+  document.querySelector(".next").addEventListener("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+  });
 }
 
+function closeModal() {
+  newEventModal.style.display = "none";
+  backDrop.style.display = "none";
+  eventTitleInput.value = "";
+  clicked = null;
+  renderCalendar();
+}
 
-function chooseHoliday(){
-  monHoliday.addEventListener('change',()=>{
-    renderCalendar()
-  })
-  
-  tueHoliday.addEventListener('change',()=>{
-    renderCalendar()
-  })
-  
-  wedHoliday.addEventListener('change',()=>{
-    renderCalendar()
-  })
-  
-  thuHoliday.addEventListener('change',()=>{
-    renderCalendar()
-  })
-  
-  friHoliday.addEventListener('change',()=>{
-    renderCalendar()
-  })
+function saveEvent() {
+  if (eventTitleInput.value) {
+    eventTitleInput.classList.remove("error");
+
+    events.push({
+      date: clicked,
+      title: eventTitleInput.value,
+    });
+
+    localStorage.setItem("events", JSON.stringify(events));
+    closeModal();
+  } else {
+    eventTitleInput.classList.add("error");
   }
+}
 
-chooseHoliday()
-chooseDay()
-startMonday()
+function configOpen() {
+  configWindow.hidden = true;
+  config.addEventListener("click", () => {
+    configWindow.hidden = false;
+  });
+
+  iconClose.addEventListener("click", () => {
+    configWindow.hidden = true;
+  });
+
+  document.getElementById("saveButton").addEventListener("click", saveEvent);
+  document.getElementById("cancelButton").addEventListener("click", closeModal);
+}
+
+function openWeather() {
+  openWeatherPanel.addEventListener("click", () => {
+    contWeatherApi.style.display = "flex";
+    iconCloseWeather.style.display = "block";
+  });
+
+  iconCloseWeather.addEventListener("click", () => {
+    contWeatherApi.style.display = "none";
+    iconCloseWeather.style.display = "none";
+  });
+}
+
+function chooseHoliday() {
+  monHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  tueHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  wedHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  thuHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  friHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+}
+
+chooseHoliday();
+startMonday();
 openWeather();
 inactivePrevDays();
 configOpen();
 initButtons();
-weatherFiveDay()
+weatherFiveDay();
 renderCalendar();
 
+function weatherFiveDay() {
+  fetch(
+    "https://api.openweathermap.org/data/2.5/forecast?id=625073&appid=9ad87bd97cf062943c727a11f4096436"
+  )
+    .then(function (resp) {
+      return resp.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      document.getElementById("dayWeatherCurrentDay").innerHTML =
+        data.list[0].dt_txt;
+      document.querySelector(".city").innerHTML = data.city.name;
+      document.querySelector(".current-weather").innerHTML = `${Math.round(
+        data.list[0].main.temp - 273
+      )} &deg`;
+      document.querySelector(".desc-weather").innerHTML =
+        data.list[0].weather[0]["description"];
 
-function weatherFiveDay  () {
-  fetch('https://api.openweathermap.org/data/2.5/forecast?id=625073&appid=9ad87bd97cf062943c727a11f4096436')
-  .then(function(resp){return resp.json()})
-  .then(function(data){
-      console.log(data)
-      document.getElementById('dayWeatherCurrentDay').innerHTML = data.list[0].dt_txt;
-      document.querySelector('.city').innerHTML = data.city.name;
-      document.querySelector('.current-weather').innerHTML = `${Math.round(data.list[0].main.temp - 273)} &deg`;
-      document.querySelector('.desc-weather').innerHTML = data.list[0].weather[0]['description'];
-  
-      document.getElementById('dayWeatherSecondDay').innerHTML = data.list[2].dt_txt;
-      document.querySelector('.city-second').innerHTML = data.city.name;
-      document.querySelector('.current-weather-second-day').innerHTML = `${Math.round(data.list[2].main.temp - 273)} &deg`;
-      document.querySelector('.desc-weather-second-day').innerHTML = data.list[2].weather[0]['description'];
-  
-      document.getElementById('dayWeatherThirdtDay').innerHTML = data.list[9].dt_txt;
-      document.querySelector('.city-third').innerHTML = data.city.name;
-      document.querySelector('.current-weather-third-day').innerHTML = `${Math.round(data.list[9].main.temp - 273)} &deg`;
-      document.querySelector('.desc-weather-third-day').innerHTML = data.list[9].weather[0]['description'];
-  
-      document.getElementById('dayWeatherFourthDay').innerHTML = data.list[17].dt_txt;
-      document.querySelector('.city-fourth').innerHTML = data.city.name;
-      document.querySelector('.current-weather-fourth-day').innerHTML = `${Math.round(data.list[17].main.temp - 273)} &deg`;
-      document.querySelector('.desc-weather-fourth-day').innerHTML = data.list[17].weather[0]['description'];
-  
-      document.getElementById('dayWeatherFifthDay').innerHTML = data.list[25].dt_txt;
-      document.querySelector('.city-fifth').innerHTML = data.city.name;
-      document.querySelector('.current-weather-fifth-day').innerHTML = `${Math.round(data.list[25].main.temp - 273)} &deg`;
-      document.querySelector('.desc-weather-fifth-day').innerHTML = data.list[25].weather[0]['description'];
-  })
-  .catch(function(){
-  //error
-  })
-  }
+      document.getElementById("dayWeatherSecondDay").innerHTML =
+        data.list[2].dt_txt;
+      document.querySelector(".city-second").innerHTML = data.city.name;
+      document.querySelector(
+        ".current-weather-second-day"
+      ).innerHTML = `${Math.round(data.list[2].main.temp - 273)} &deg`;
+      document.querySelector(".desc-weather-second-day").innerHTML =
+        data.list[2].weather[0]["description"];
 
-  weatherFiveDay()
+      document.getElementById("dayWeatherThirdtDay").innerHTML =
+        data.list[9].dt_txt;
+      document.querySelector(".city-third").innerHTML = data.city.name;
+      document.querySelector(
+        ".current-weather-third-day"
+      ).innerHTML = `${Math.round(data.list[9].main.temp - 273)} &deg`;
+      document.querySelector(".desc-weather-third-day").innerHTML =
+        data.list[9].weather[0]["description"];
+
+      document.getElementById("dayWeatherFourthDay").innerHTML =
+        data.list[17].dt_txt;
+      document.querySelector(".city-fourth").innerHTML = data.city.name;
+      document.querySelector(
+        ".current-weather-fourth-day"
+      ).innerHTML = `${Math.round(data.list[17].main.temp - 273)} &deg`;
+      document.querySelector(".desc-weather-fourth-day").innerHTML =
+        data.list[17].weather[0]["description"];
+
+      document.getElementById("dayWeatherFifthDay").innerHTML =
+        data.list[25].dt_txt;
+      document.querySelector(".city-fifth").innerHTML = data.city.name;
+      document.querySelector(
+        ".current-weather-fifth-day"
+      ).innerHTML = `${Math.round(data.list[25].main.temp - 273)} &deg`;
+      document.querySelector(".desc-weather-fifth-day").innerHTML =
+        data.list[25].weather[0]["description"];
+    })
+    .catch(function () {
+      //error
+    });
+}
+
+weatherFiveDay();

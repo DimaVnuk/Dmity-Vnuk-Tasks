@@ -1,0 +1,338 @@
+$fontSizeForAllDocument: 62.5%;
+$borderWhite: 1px solid white;
+@mixin widthElem($width) {
+	width: $width;
+}
+@mixin backgroundColor($bgColor) {
+	background-color: $bgColor;
+}
+@mixin colorElem($color) {
+	color: $color;
+}
+@mixin heightElem($height) {
+	height: $height;
+}
+@mixin displayFlex($justifyContent, $alignItems, $flexDirection) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $flexDirection;
+}
+@mixin fontSize($fontSize) {
+	font-size: $fontSize;
+}
+@mixin holiday {
+	font-size: 1.4rem;
+	margin: 0.3rem;
+	width: calc(40.2rem / 7);
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+	transition: background-color 0.2s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Indie Flower", cursive;
+}
+
+html {
+	font-size: $fontSizeForAllDocument;
+	@include backgroundColor(#12121f);
+}
+
+.container {
+	@include widthElem(100%);
+	@include heightElem(100vh);
+	@include backgroundColor(#12121f);
+	@include colorElem(#eee);
+	@include displayFlex(center, center, column);
+	.icon-close-weather {
+		@include colorElem(yellow);
+		display: none;
+		border: $borderWhite;
+		@include backgroundColor(#0078d7);
+		@include widthElem(1500px);
+		@include heightElem(30px);
+		font-size: 20px;
+	}
+}
+.cont-weather-api {
+	display: flex;
+	.weather {
+		border: $borderWhite;
+		@include widthElem(300px);
+		@include heightElem(300px);
+		padding: 50px;
+		margin-bottom: 10px;
+		@include displayFlex(space-around, center, column);
+		@include backgroundColor(#0078d7);
+		.weather-wrapper {
+			@include widthElem(200px);
+			@include heightElem(250px);
+			margin-bottom: 10px;
+			@include displayFlex(center, center, row);
+
+			@include fontSize(30px);
+			text-align: center;
+		}
+	}
+}
+
+.open-weather {
+	@include widthElem(45rem);
+	@include heightElem(50px);
+	@include displayFlex(center, center, row);
+	@include fontSize(30px);
+	@include backgroundColor(#0078d7);
+	border: $borderWhite;
+}
+
+.cont-weather-api {
+	display: none;
+}
+
+.calendar {
+	@include widthElem(45rem);
+	@include heightElem(52rem);
+	@include backgroundColor(#222227);
+	box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+	.month {
+		@include widthElem(100%);
+		@include heightElem(12rem);
+		@include backgroundColor(#0078d7);
+		border-bottom: 1px solid gray;
+		@include displayFlex(space-between, center, row);
+		padding: 0 2rem;
+		text-align: center;
+		text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+		i {
+			@include fontSize(2.5rem);
+			cursor: pointer;
+		}
+		h1 {
+			@include fontSize(6rem);
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			@include fontSize(3rem);
+		}
+	}
+	.weakDays {
+		@include widthElem(100%);
+		@include heightElem(5rem);
+		padding: 0 0.4rem;
+		display: flex;
+		align-items: center;
+		div {
+			@include fontSize(1.5rem);
+			font-weight: 400;
+			letter-spacing: 0.1rem;
+			width: calc(44.2rem / 7);
+			@include displayFlex(center, center, row);
+			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+		}
+	}
+	.days {
+		@include widthElem(100%);
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0.2rem;
+		div {
+			@include fontSize(1.4rem);
+			margin: 0.3rem;
+			width: calc(40.2rem / 7);
+			@include heightElem(5rem);
+			@include displayFlex(center, center, row);
+			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+			transition: background-color 0.2s;
+			&:hover:not(.today) {
+				@include backgroundColor(#262626);
+				border: 0.2rem solid #777;
+				cursor: pointer;
+			}
+			&:nth-child(7n + 1) {
+				border: 1px solid gray;
+			}
+			&:nth-child(7n + 7):not(.today) {
+				border: 1px solid gray;
+			}
+		}
+	}
+}
+
+.holiday-mon {
+	@include holiday;
+	&:nth-child(7n + 9) {
+		border: 1px solid gray;
+	}
+}
+
+.holiday-tue {
+	@include holiday;
+	&:nth-child(7n + 10) {
+		border: 1px solid gray;
+	}
+}
+
+.holiday-wed {
+	@include holiday;
+	&:nth-child(7n + 11) {
+		border: 1px solid gray;
+	}
+}
+
+.holiday-fri {
+	@include holiday;
+	&:nth-child(7n + 13) {
+		border: 1px solid gray;
+	}
+}
+
+.prev-date,
+.next-date {
+	opacity: 0.5;
+}
+
+.today {
+	@include backgroundColor(#0078d7);
+}
+.save-button,
+.close-button {
+	background-color: #7288cf;
+	color: white;
+	width: 146px;
+	height: 35px;
+	border-radius: 10px;
+	font-size: 20px;
+}
+.calendar__config {
+	@include widthElem(45rem);
+	@include heightElem(6rem);
+	margin-top: 10px;
+	@include backgroundColor(#0078d7);
+	@include displayFlex(center, center, row);
+	@include fontSize(30px);
+	@include colorElem(#eee);
+}
+
+.config__config-window {
+	@include widthElem(45rem);
+	@include heightElem(17.5rem);
+	border: 1px solid gray;
+	@include backgroundColor(#0078d7);
+	.fa-times-circle {
+		@include fontSize(20px);
+		display: flex;
+		justify-content: flex-end;
+		@include colorElem(yellow);
+	}
+	.change-first-day {
+		@include fontSize(15px);
+	}
+}
+
+.new-event-modal,
+.delete-event-modal {
+	display: none;
+	z-index: 20;
+	padding: 25px;
+	@include backgroundColor(#0078d7);
+	box-shadow: 0px 0px 3px black;
+	border-radius: 5px;
+	@include widthElem(350px);
+	top: 100px;
+	left: calc(50% - 175px);
+	position: absolute;
+	font-family: sans-serif;
+	.title-modal-wind {
+		@include colorElem(#eee);
+		@include fontSize(50px);
+	}
+}
+
+/* .delete-event-modal {
+	display: none;
+	z-index: 20;
+	padding: 25px;
+	@include backgroundColor(#0078d7);
+	box-shadow: 0px 0px 3px black;
+	border-radius: 5px;
+	@include widthElem(350px);
+	top: 100px;
+	left: calc(50% - 175px);
+	position: absolute;
+	font-family: sans-serif; */
+.title-modal-wind {
+	@include colorElem(#eee);
+	@include fontSize(50px);
+}
+/* } */
+.event-title-input {
+	padding: 10px;
+	@include widthElem(100%);
+	box-sizing: border-box;
+	margin-bottom: 25px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	box-shadow: 0px 0px 3px gray;
+	@include fontSize(25px);
+}
+
+.event-title-input.error {
+	border: 2px solid red;
+}
+
+.cancel-button {
+	@include backgroundColor(#d36c6c);
+	@include colorElem(white);
+	@include widthElem(146px);
+	@include heightElem(35px);
+	border-radius: 10px;
+	@include fontSize(20px);
+}
+.delete-button {
+	@include backgroundColor(#d36c6c);
+	@include colorElem(white);
+	@include widthElem(146px);
+	@include heightElem(35px);
+	border-radius: 10px;
+	@include fontSize(20px);
+}
+
+.event-text {
+	@include fontSize(14px);
+}
+
+.modal-back-drop {
+	display: none;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	@include widthElem(100vw);
+	@include heightElem(100vh);
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.event {
+	@include fontSize(10px);
+	padding: 3px;
+	@include backgroundColor(#0078d7);
+	@include colorElem(#eee);
+	border-radius: 5px;
+	max-height: 55px;
+	overflow: hidden;
+}
+
+.prev-date-hide {
+	opacity: 0;
+}

@@ -1,17 +1,19 @@
-* {
+@import "~normalize.css";
+
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Festive', cursive;
-font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower', cursive;
 
 }
 html {
   font-size: 62.5%;
   background-color: #12121f;
-}
+} */
 
-.container {
+/* .container {
   width: 100%;
   height: 100vh;
   background-color: #12121f;
@@ -20,16 +22,16 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
 
-.calendar {
+/* .calendar {
   width: 45rem;
   height: 52rem;
   background-color: #222227;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
-}
+} */
 
-.month {
+/* .month {
   width: 100%;
   height: 12rem;
   background-color: #0078D7;
@@ -40,34 +42,34 @@ html {
   padding: 0 2rem;
   text-align: center;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
+} */
 
-.month i {
+/* .month i {
   font-size: 2.5rem;
   cursor: pointer;
-}
+} */
 
-.month h1 {
+/* .month h1 {
   font-size: 6rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
-}
+} */
 
-.month p {
+/* .month p {
   font-size: 3rem;
-}
+} */
 
-.weakDays {
+/* .weakDays {
   width: 100%;
   height: 5rem;
   padding: 0 0.4rem;
   display: flex;
   align-items: center;
-}
+} */
 
-.weakDays div {
+/* .weakDays div {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
@@ -76,16 +78,16 @@ html {
   justify-content: center;
   align-items: center;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
+} */
 
-.days {
+/* .days {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 0.2rem;
-}
+} */
 
-.days div {
+/* .days div {
   font-size: 1.4rem;
   margin: 0.3rem;
   width: calc(40.2rem / 7);
@@ -95,21 +97,21 @@ html {
   align-items: center;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
   transition: background-color 0.2s;
-}
+} */
 
-.days div:hover:not(.today) {
+/* .days div:hover:not(.today) {
   background-color: #262626;
   border: 0.2rem solid #777;
   cursor: pointer;
-}
-.days div:nth-child(7n+1){
+} */
+/* .days div:nth-child(7n+1){
   border: 1px solid gray;
-}
-.days div:nth-child(7n+7):not(.today){
+} */
+/* .days div:nth-child(7n+7):not(.today){
   border: 1px solid gray;
-}
+} */
 
-.holiday-mon{
+/* .holiday-mon{
   font-size: 1.4rem;
   margin: 0.3rem;
   width: calc(40.2rem / 7);
@@ -173,20 +175,20 @@ html {
 }
 .holiday-fri:nth-child(7n+13){
   border: 1px solid gray;
-}
-.prev-date,
+} */
+/* .prev-date,
 .next-date {
   opacity: 0.5;
-}
+} */
 
-.today {
+/* .today {
   background-color: #0078D7;
-}
+} */
 
-.calendar__config{
+/* .calendar__config{
   width: 45rem;
   height: 6rem;
-  /* border: 1px solid #000; */
+
   margin-top: 10px;
   background-color: #0078D7;
   display: flex;
@@ -194,31 +196,31 @@ html {
   align-items: center;
   font-size: 30px;
   color: white;
-}
+} */
 
-.config__config-window{
+/* .config__config-window{
   width: 45rem;
   height: 17.5rem;
   border: 1px solid gray;
   background-color: #0078D7;
 
-}
+} */
 
 
-.fa-times-circle{
+/* .fa-times-circle{
   font-size: 20px;
   display: flex;
   justify-content: flex-end;
   color: yellow;
-}
+} */
 
-.change-first-day{
+/* .change-first-day{
   font-size: 15px;
-}
+} */
 
 
 
-.new-event-modal, .delete-event-modal {
+/* .new-event-modal, .delete-event-modal {
   display: none;
   z-index: 20;
   padding: 25px;
@@ -230,8 +232,8 @@ html {
   left: calc(50% - 175px);
   position: absolute;
   font-family: sans-serif;
-}
-.event-title-input {
+} */
+/* .event-title-input {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -241,34 +243,34 @@ html {
   border: none;
   box-shadow: 0px 0px 3px gray;
   font-size: 25px;
-}
-.event-title-input.error {
+} */
+/* .event-title-input.error {
   border: 2px solid red;
-}
-.cancel-button, .delete-button {
+} */
+/* .cancel-button, .delete-button {
   background-color: #d36c6c;
   color: white;
   width: 146px;
   height: 35px;
   border-radius: 10px;
   font-size: 20px;
-}
-.save-button, .close-button {
+} */
+/* .save-button, .close-button {
   background-color: #7288cf;
   color: white;
   width: 146px;
   height: 35px;
   border-radius: 10px;
   font-size: 20px;
-}
-.title-modal-wind{
+} */
+/* .title-modal-wind{
   color: white;
   font-size: 50px;
-}
-.event-text {
+} */
+/* .event-text {
   font-size: 14px;
-}
-.modal-back-drop {
+} */
+/* .modal-back-drop {
   display: none;
   top: 0px;
   left: 0px;
@@ -277,9 +279,9 @@ html {
   height: 100vh;
   position: absolute;
   background-color: rgba(0,0,0,0.8);
-}
+} */
 
-.event {
+/* .event {
   font-size: 10px;
   padding: 3px;
   background-color: #0078D7;
@@ -287,13 +289,13 @@ html {
   border-radius: 5px;
   max-height: 55px;
   overflow: hidden;
-}
+} */
 
-.prev-date-hide{
+/* .prev-date-hide{
   opacity: 0;
-}
+} */
 
-.weather{
+/* .weather{
   border: 1px solid white;
   width: 300px;
   height: 300px;
@@ -304,10 +306,10 @@ html {
   flex-direction: column;
   align-items: center;
   background: #0078D7;
-}
+} */
 
-.weather-wrapper{
- /*  border: 1px solid white; */
+/* .weather-wrapper{
+
   width: 200px;
   height: 250px;
   margin-bottom: 10px;
@@ -316,35 +318,35 @@ html {
   align-items: center;
   font-size: 30px;
   text-align: center;
-  /* background: #0078D7; */
-}
+ 
+} */
 
-.cont-weather-api{
+/* .cont-weather-api{
   display: flex;
-}
+} */
 
-.open-weather{
+/* .open-weather{
   width: 45rem;
   height: 50px;
-  /* border: 1px solid white; */
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   background: #0078D7;
   border-bottom: 1px solid white;
-}
+} */
 
-.cont-weather-api{
+/* .cont-weather-api{
   display: none;
   
-}
+} */
 
-.icon-close-weather{
+/* .icon-close-weather{
   color: yellow;
   display: none;
   border: 1px solid white;
   background: #0078D7;
   width: 1500px;
   height: 30px;
-}
+} */
