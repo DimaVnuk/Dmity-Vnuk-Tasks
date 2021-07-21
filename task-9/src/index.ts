@@ -1,70 +1,76 @@
-/* import * as $ from 'jquery' */
-/* import xml from './assets/' */
-/* import csv from './assets/' */
-/* import "./style.css"; */
-import "./style.scss";
+import './style/style.scss';
 
-let clicked = null;
-const prevDay = document.getElementsByClassName("prev-date");
-const nextDay = document.getElementsByClassName("next-date");
 
+let clicked : null = null;
+
+const prevDay = document.getElementsByClassName("prev-date") as HTMLCollectionOf<HTMLElement>;
+const nextDay = document.getElementsByClassName("next-date") as HTMLCollectionOf<HTMLElement>;
+
+const newEventModal = document.getElementById("newEventModal") as HTMLElement;
+const backDrop = document.getElementById("modalBackDrop") as HTMLElement;
+const monthDays = document.querySelector(".days") as HTMLElement;
+const weakDays = document.querySelector(".weakDays") as HTMLElement;
+const deleteModal = document.getElementById("deleteEventModal") as HTMLElement;
 let events = localStorage.getItem("events")
-  ? JSON.parse(localStorage.getItem("events"))
-  : [];
+  ? JSON.parse(localStorage.getItem("events") as string)
+  : [] ;
 
-const newEventModal = document.getElementById("newEventModal");
-const backDrop = document.getElementById("modalBackDrop");
-const monthDays = document.querySelector(".days");
-const weakDays = document.querySelector(".weakDays");
+const dayOfWeak : string[] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const dayOfWeakStartWithMon : string[] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const date : Date = new Date();
+const day: number = date.getDate();
+const month : number = date.getMonth();
+const year: number = date.getFullYear();
 
-const dayOfWeak = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const dayOfWeakStartWithMon = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-const date = new Date();
-const day = date.getDate();
-const month = date.getMonth();
-const year = date.getFullYear();
 
-function openModal(dt) {
+function openModalWindow(dt: any) : void {
   clicked = dt;
 
-  const eventForDay = events.find((e) => e.dt === clicked);
-
+  const eventForDay = events.find((e: any) => e.dt === clicked);
+const textEvent = document.getElementById("eventText") as HTMLElement;
   if (eventForDay) {
-    document.getElementById("eventText").innerText = eventForDay.title;
-    deleteEventModal.style.display = "block";
+    textEvent.innerText = eventForDay.title;
+    deleteModal.style.display = "block";
   } else {
     newEventModal.style.display = "block";
   }
   backDrop.style.display = "block";
 }
-function renderCalendar() {
+const hiddenInactiveDays = document.getElementById("hideInactiveDays") as HTMLInputElement;
+const startWithMonday = document.getElementById("startWithMon") as HTMLInputElement;
+const mondayHoliday = document.getElementById("monHoliday") as HTMLInputElement;
+const tuesdayHoliday = document.getElementById("tueHoliday") as HTMLInputElement;
+const wednesdayHoliday = document.getElementById("wedHoliday") as HTMLInputElement;
+const thursdayHoliday = document.getElementById("thuHoliday") as HTMLInputElement;
+const fridayHoliday = document.getElementById("friHoliday") as HTMLInputElement;
+function renderCalendar() : void{
   date.setDate(1);
 
   const lastDay = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
-  ).getDate(); //daysInMonth = new Date(year, month + 1, 0).getDate();
+  ).getDate(); 
 
-  const prevLastDay = new Date(
+  const prevLastDay: number = new Date(
     date.getFullYear(),
     date.getMonth(),
     0
   ).getDate();
 
-  let firstDayIndex = date.getDay();
-  let firstDayIndexNew = date.getDay() - 1;
+  let firstDayIndex: number = date.getDay();
+  let firstDayIndexNew: number = date.getDay() - 1;
   /* firstDayIndex; */
 
-  const lastDayIndex = new Date(
+  const lastDayIndex: number = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDay();
 
-  const nextDays = 7 - lastDayIndex - 1;
+  const nextDays : number = 7 - lastDayIndex - 1;
 
-  const months = [
+  const months : string[] = [
     "January",
     "February",
     "March",
@@ -93,48 +99,48 @@ function renderCalendar() {
   let daysThuHol = "";
   let daysFriHol = "";
   // prev days
-  for (let x = firstDayIndex; x > 0; x--) {
+  for (let x: number = firstDayIndex; x > 0; x--) {
     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
   }
   //end prev days
 
   // new prev days
-  for (let t = firstDayIndexNew; t > 0; t--) {
+  for (let t: number = firstDayIndexNew; t > 0; t--) {
     newDays += `<div class="prev-date">${prevLastDay - t + 1}</div>`;
   }
   // end new prev days
 
   // new prev days
-  for (let h = firstDayIndex; h > 0; h--) {
+  for (let h: number = firstDayIndex; h > 0; h--) {
     daysMonHol += `<div class="prev-date">${prevLastDay - h + 1}</div>`;
   }
   // end new prev days
-  for (let q = firstDayIndex; q > 0; q--) {
+  for (let q: number = firstDayIndex; q > 0; q--) {
     daysTueHol += `<div class="prev-date">${prevLastDay - q + 1}</div>`;
   }
 
-  for (let w = firstDayIndex; w > 0; w--) {
+  for (let w: number = firstDayIndex; w > 0; w--) {
     daysWedHol += `<div class="prev-date">${prevLastDay - w + 1}</div>`;
   }
 
-  for (let e = firstDayIndex; e > 0; e--) {
+  for (let e: number = firstDayIndex; e > 0; e--) {
     daysThuHol += `<div class="prev-date">${prevLastDay - e + 1}</div>`;
   }
 
-  for (let r = firstDayIndex; r > 0; r--) {
+  for (let r: number = firstDayIndex; r > 0; r--) {
     daysFriHol += `<div class="prev-date">${prevLastDay - r + 1}</div>`;
   }
   // weak
-  for (let k = 0; k < dayOfWeak.length; k++) {
+  for (let k: number = 0; k < dayOfWeak.length; k++) {
     weak += `<div>${dayOfWeak[k]}</div>`;
   }
-  for (let a = 0; a < dayOfWeakStartWithMon.length; a++) {
+  for (let a : number= 0; a < dayOfWeakStartWithMon.length; a++) {
     newWeak += `<div>${dayOfWeakStartWithMon[a]}</div>`;
   }
   // end weak
 
   // current day
-  for (let i = 1; i <= lastDay; i++) {
+  for (let i: number = 1; i <= lastDay; i++) {
     if (
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -147,7 +153,7 @@ function renderCalendar() {
   // end current day
 
   // new current day
-  for (let p = 1; p <= lastDay; p++) {
+  for (let p: number = 1; p <= lastDay; p++) {
     if (
       p === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -160,7 +166,7 @@ function renderCalendar() {
   //end new current day
 
   // new current day mon
-  for (let z = 1; z <= lastDay; z++) {
+  for (let z: number = 1; z <= lastDay; z++) {
     if (
       z === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -170,7 +176,7 @@ function renderCalendar() {
       daysMonHol += `<div class ="holiday-mon">${z}</div>`;
     }
   }
-  for (let y = 1; y <= lastDay; y++) {
+  for (let y: number = 1; y <= lastDay; y++) {
     if (
       y === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -180,7 +186,7 @@ function renderCalendar() {
       daysTueHol += `<div class ="holiday-tue">${y}</div>`;
     }
   }
-  for (let u = 1; u <= lastDay; u++) {
+  for (let u: number = 1; u <= lastDay; u++) {
     if (
       u === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -190,7 +196,7 @@ function renderCalendar() {
       daysWedHol += `<div class ="holiday-wed">${u}</div>`;
     }
   }
-  for (let o = 1; o <= lastDay; o++) {
+  for (let o: number = 1; o <= lastDay; o++) {
     if (
       o === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -200,7 +206,7 @@ function renderCalendar() {
       daysThuHol += `<div class ="holiday-thu">${o}</div>`;
     }
   }
-  for (let f = 1; f <= lastDay; f++) {
+  for (let f: number = 1; f <= lastDay; f++) {
     if (
       f === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
@@ -214,36 +220,37 @@ function renderCalendar() {
   // end new current day mon
 
   // next days
-  for (let j = 1; j <= nextDays; j++) {
+  for (let j: number = 1; j <= nextDays; j++) {
     days += `<div class="next-date">${j}</div>`;
   }
   //end next days
 
   // new next days
-  for (let s = 1; s <= nextDays; s++) {
+  for (let s : number = 1; s <= nextDays; s++) {
     newDays += `<div class="next-date">${s}</div>`;
   }
   //end new next days
 
   // new next days
-  for (let l = 1; l <= nextDays; l++) {
+  for (let l : number= 1; l <= nextDays; l++) {
     daysMonHol += `<div class="next-date">${l}</div>`;
   }
   //end new next days
-  for (let g = 1; g <= nextDays; g++) {
+  for (let g: number = 1; g <= nextDays; g++) {
     daysTueHol += `<div class="next-date">${g}</div>`;
   }
-  for (let b = 1; b <= nextDays; b++) {
+  for (let b: number = 1; b <= nextDays; b++) {
     daysWedHol += `<div class="next-date">${b}</div>`;
   }
-  for (let n = 1; n <= nextDays; n++) {
+  for (let n: number = 1; n <= nextDays; n++) {
     daysThuHol += `<div class="next-date">${n}</div>`;
   }
-  for (let m = 1; m <= nextDays; m++) {
+  for (let m: number = 1; m <= nextDays; m++) {
     daysFriHol += `<div class="next-date">${m}</div>`;
   }
-
-  if (startWithMon.checked) {
+  
+  
+  if (startWithMonday.checked) {
     weakDays.innerHTML = newWeak;
     monthDays.innerHTML = newDays;
   } else {
@@ -251,56 +258,60 @@ function renderCalendar() {
     monthDays.innerHTML = days;
   }
 
-  if (hideInactiveDays.checked) {
-    for (let i = 0; i < prevDay.length; i++) {
+
+  if (hiddenInactiveDays.checked) {
+    for (let i: number = 0; i < prevDay.length; i++) {
       prevDay[i].style.opacity = "0";
     }
-    for (let j = 0; j < nextDay.length; j++) {
+    for (let j: number = 0; j < nextDay.length; j++) {
       nextDay[j].style.opacity = "0";
     }
   } else {
-    for (let i = 0; i < prevDay.length; i++) {
+    for (let i: number = 0; i < prevDay.length; i++) {
       prevDay[i].style.opacity = "0.5";
     }
-    for (let j = 0; j < nextDay.length; j++) {
+    for (let j: number = 0; j < nextDay.length; j++) {
       nextDay[j].style.opacity = "0.5";
     }
   }
 
-  if (monHoliday.checked) {
+
+  if (mondayHoliday.checked) {
     monthDays.innerHTML = daysMonHol;
   }
-  if (tueHoliday.checked) {
+  if (tuesdayHoliday.checked) {
     monthDays.innerHTML = daysTueHol;
   }
-  if (wedHoliday.checked) {
+  if (wednesdayHoliday.checked) {
     monthDays.innerHTML = daysWedHol;
   }
-  if (thuHoliday.checked) {
+  if (thursdayHoliday.checked) {
     monthDays.innerHTML = daysThuHol;
   }
-  if (friHoliday.checked) {
+  if (fridayHoliday.checked) {
     monthDays.innerHTML = daysFriHol;
   }
 }
 
-function inactivePrevDays() {
-  hideInactiveDays.addEventListener("click", () => {
+
+
+function inactivePreviousDays() : void{
+  hiddenInactiveDays.addEventListener("click", () => {
     renderCalendar();
   });
 }
 
-function startMonday() {
-  startWithMon.addEventListener("change", () => {
+function startedMonday() : void{
+  startWithMonday.addEventListener("change", () => {
     renderCalendar();
   });
 }
 
 monthDays.addEventListener("click", () =>
-  openModal(`${month + 1}/ ${day}/ ${year}`)
+openModalWindow(`${month + 1}/ ${day}/ ${year}`)
 );
 
-function initButtons() {
+function initializeButtons() : void{
   document.querySelector(".prev").addEventListener("click", () => {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
@@ -311,89 +322,97 @@ function initButtons() {
     renderCalendar();
   });
 }
-
-function closeModal() {
+const titleInput = document.getElementById("eventTitleInput") as HTMLInputElement;
+function closeModalWindow() : void{
   newEventModal.style.display = "none";
   backDrop.style.display = "none";
-  eventTitleInput.value = "";
+  titleInput.value = "";
   clicked = null;
   renderCalendar();
 }
 
-function saveEvent() {
-  if (eventTitleInput.value) {
-    eventTitleInput.classList.remove("error");
+function saveEventClicked() : void{
+  if (titleInput.value) {
+    titleInput.classList.remove("error");
 
     events.push({
       date: clicked,
-      title: eventTitleInput.value,
+      title: titleInput.value,
     });
 
     localStorage.setItem("events", JSON.stringify(events));
-    closeModal();
+    closeModalWindow();
   } else {
-    eventTitleInput.classList.add("error");
+    titleInput.classList.add("error");
   }
 }
 
-function configOpen() {
-  configWindow.hidden = true;
-  config.addEventListener("click", () => {
-    configWindow.hidden = false;
+const configurationWindow = document.getElementById("configWindow") as HTMLInputElement;
+const options = document.getElementById("config") as HTMLInputElement;
+const closeButton = document.getElementById("iconClose") as HTMLInputElement;
+function configurationOpen() {
+  configurationWindow.hidden = true;
+  options.addEventListener("click", () => {
+    configurationWindow.hidden = false;
   });
 
-  iconClose.addEventListener("click", () => {
-    configWindow.hidden = true;
+  closeButton.addEventListener("click", () => {
+    configurationWindow.hidden = true;
   });
 
-  document.getElementById("saveButton").addEventListener("click", saveEvent);
-  document.getElementById("cancelButton").addEventListener("click", closeModal);
+  document.getElementById("saveButton").addEventListener("click", saveEventClicked);
+  document.getElementById("cancelButton").addEventListener("click", closeModalWindow);
 }
 
-function openWeather() {
-  openWeatherPanel.addEventListener("click", () => {
-    contWeatherApi.style.display = "flex";
-    iconCloseWeather.style.display = "block";
+const weatherPanel = document.getElementById("openWeatherPanel") as HTMLInputElement;
+const weatherApi = document.getElementById("contWeatherApi") as HTMLInputElement;
+const closeWeatherButton = document.getElementById("iconCloseWeather") as HTMLInputElement;
+function openWeatherWindow() {
+  weatherPanel.addEventListener("click", () => {
+    weatherApi.style.display = "flex";
+    closeWeatherButton.style.display = "block";
   });
 
-  iconCloseWeather.addEventListener("click", () => {
-    contWeatherApi.style.display = "none";
-    iconCloseWeather.style.display = "none";
-  });
-}
-
-function chooseHoliday() {
-  monHoliday.addEventListener("change", () => {
-    renderCalendar();
-  });
-
-  tueHoliday.addEventListener("change", () => {
-    renderCalendar();
-  });
-
-  wedHoliday.addEventListener("change", () => {
-    renderCalendar();
-  });
-
-  thuHoliday.addEventListener("change", () => {
-    renderCalendar();
-  });
-
-  friHoliday.addEventListener("change", () => {
-    renderCalendar();
+  closeWeatherButton.addEventListener("click", () => {
+    weatherApi.style.display = "none";
+    closeWeatherButton.style.display = "none";
   });
 }
 
-chooseHoliday();
-startMonday();
-openWeather();
-inactivePrevDays();
-configOpen();
-initButtons();
-weatherFiveDay();
+function chooseHolidayDay() : void{
+  mondayHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  tuesdayHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  wednesdayHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  thursdayHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+
+  fridayHoliday.addEventListener("change", () => {
+    renderCalendar();
+  });
+}
+
+chooseHolidayDay();
+startedMonday()
+openWeatherWindow();
+inactivePreviousDays();
+configurationOpen()
+initializeButtons()
+
 renderCalendar();
+closeModalWindow()
 
-function weatherFiveDay() {
+
+function weatherFiveDayApi() {
   fetch(
     "https://api.openweathermap.org/data/2.5/forecast?id=625073&appid=9ad87bd97cf062943c727a11f4096436"
   )
@@ -452,4 +471,4 @@ function weatherFiveDay() {
     });
 }
 
-weatherFiveDay();
+weatherFiveDayApi();
