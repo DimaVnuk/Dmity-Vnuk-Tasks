@@ -1,0 +1,102 @@
+<!-- src/template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Festive&family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="container">
+        <div><i class="far fa-times-circle icon-close-weather" id="iconCloseWeather"></i></div>
+        <div class="cont-weather-api" id="contWeatherApi">
+        <div class="weather">
+          <div class="day-weather weather-wrapper" id="dayWeatherCurrentDay"></div>
+          <div class="city weather-wrapper"></div>
+          <div class="current-weather weather-wrapper"></div>
+          <div class="desc-weather weather-wrapper"></div>
+          
+        </div>
+        <div class="weather">
+          <div class="day-weather weather-wrapper" id="dayWeatherSecondDay"></div>
+          <div class="city-second weather-wrapper"></div>
+          <div class="current-weather-second-day weather-wrapper"></div>
+          <div class="desc-weather-second-day weather-wrapper"></div>
+         
+        </div>
+        <div class="weather">
+          <div class="day-weather weather-wrapper" id="dayWeatherThirdtDay"></div>
+          <div class="city-third weather-wrapper"></div>
+          <div class="current-weather-third-day weather-wrapper"></div>
+          <div class="desc-weather-third-day weather-wrapper"></div>
+         
+        </div>
+        <div class="weather">
+          <div class="day-weather weather-wrapper" id="dayWeatherFourthDay"></div>
+          <div class="city-fourth weather-wrapper"></div>
+          <div class="current-weather-fourth-day weather-wrapper"></div>
+          <div class="desc-weather-fourth-day weather-wrapper"></div>
+         
+        </div>
+        <div class="weather">
+          <div class="day-weather weather-wrapper" id="dayWeatherFifthDay"></div>
+          <div class="city-fifth weather-wrapper"></div>
+          <div class="current-weather-fifth-day weather-wrapper"></div>
+          <div class="desc-weather-fifth-day weather-wrapper"></div>
+        </div>
+      </div>
+      <div class="open-weather" id="openWeatherPanel">Weather</div>
+          <div class="calendar">
+            <div class="month">
+              <i class="fas fa-angle-left prev"></i>
+              <div class="date">
+                <h1 class="date-color"></h1>
+                <p class="date-color"></p>
+              </div>
+              <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weakDays">
+            </div>
+            <div class="days" id="div-date"></div>
+            <div class="calendar__config config" id="config">Configuration</div>
+            <div class="config__config-window" id="configWindow">
+              <i class="far fa-times-circle" id="iconClose"></i>
+              <div><label class="change-first-day"><input type="checkbox" id="hideInactiveDays">Hide/Show inactive days of the month</label></div>
+              <div><label class="change-first-day"><input type="checkbox" name="weakWithMon" id="startWithMon" /> Weak with monday</label></div>
+              <div><label class="change-first-day"><input type="checkbox" name="mon" id="monHoliday" />Monday holiday</label></div>
+              <div><label class="change-first-day"><input type="checkbox" name="tue" id="tueHoliday" />Tuesday holiday</label></div>
+              <div><label class="change-first-day"><input type="checkbox" name="wed" id="wedHoliday" />Wednesday holiday</label></div>
+              <div><label class="change-first-day"><input type="checkbox" name="thu" id="thuHoliday" />Thursday holiday</label></div>
+              <div><label class="change-first-day"><input type="checkbox" name="fri" id="friHoliday" />Friday holiday</label></div>
+            </div>
+          </div>
+          
+        </div>
+        <div id="newEventModal" class="new-event-modal">
+          <h2 class="title-modal-wind">New Event</h2>
+    
+          <input id="eventTitleInput" class="event-title-input" placeholder="Event Title" />
+    
+          <button id="saveButton" class="save-button">Save</button>
+          <button id="cancelButton" class="cancel-button">Cancel</button>
+        </div>
+    
+        <div id="deleteEventModal" class="delete-event-modal">
+          <h2>Event</h2>
+    
+          <p id="eventText" class="event-text"></p>
+    
+          <button id="deleteButton" class="delete-button">Delete</button>
+          <button id="closeButton" class="close-button">Close</button>
+        </div>
+        <div id="modalBackDrop" class="modal-back-drop"></div>
+</body>
+</html>

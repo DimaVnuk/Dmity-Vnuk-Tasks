@@ -1,0 +1,352 @@
+@import "~normalize.css";
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
+
+}
+html {
+  font-size: 62.5%;
+  background-color: #12121f;
+} */
+
+/* .container {
+  width: 100%;
+  height: 100vh;
+  background-color: #12121f;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* .calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+} */
+
+/* .month {
+  width: 100%;
+  height: 12rem;
+  background-color: #0078D7;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+} */
+
+/* .month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+} */
+
+/* .month h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+} */
+
+/* .month p {
+  font-size: 3rem;
+} */
+
+/* .weakDays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+} */
+
+/* .weakDays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+} */
+
+/* .days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+} */
+
+/* .days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+} */
+
+/* .days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+} */
+/* .days div:nth-child(7n+1){
+  border: 1px solid gray;
+} */
+/* .days div:nth-child(7n+7):not(.today){
+  border: 1px solid gray;
+} */
+
+/* .holiday-mon{
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.holiday-tue{
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.holiday-wed{
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.holiday-fri{
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.holiday-mon:nth-child(7n+9){
+  border: 1px solid gray;
+}
+
+.holiday-tue:nth-child(7n+10){
+  border: 1px solid gray;
+}
+
+.holiday-wed:nth-child(7n+11){
+  border: 1px solid gray;
+}
+.holiday-thu:nth-child(7n+12){
+  border: 1px solid gray;
+}
+.holiday-fri:nth-child(7n+13){
+  border: 1px solid gray;
+} */
+/* .prev-date,
+.next-date {
+  opacity: 0.5;
+} */
+
+/* .today {
+  background-color: #0078D7;
+} */
+
+/* .calendar__config{
+  width: 45rem;
+  height: 6rem;
+
+  margin-top: 10px;
+  background-color: #0078D7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+} */
+
+/* .config__config-window{
+  width: 45rem;
+  height: 17.5rem;
+  border: 1px solid gray;
+  background-color: #0078D7;
+
+} */
+
+
+/* .fa-times-circle{
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  color: yellow;
+} */
+
+/* .change-first-day{
+  font-size: 15px;
+} */
+
+
+
+/* .new-event-modal, .delete-event-modal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #0078D7;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+} */
+/* .event-title-input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+  font-size: 25px;
+} */
+/* .event-title-input.error {
+  border: 2px solid red;
+} */
+/* .cancel-button, .delete-button {
+  background-color: #d36c6c;
+  color: white;
+  width: 146px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 20px;
+} */
+/* .save-button, .close-button {
+  background-color: #7288cf;
+  color: white;
+  width: 146px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 20px;
+} */
+/* .title-modal-wind{
+  color: white;
+  font-size: 50px;
+} */
+/* .event-text {
+  font-size: 14px;
+} */
+/* .modal-back-drop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+} */
+
+/* .event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #0078D7;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+} */
+
+/* .prev-date-hide{
+  opacity: 0;
+} */
+
+/* .weather{
+  border: 1px solid white;
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background: #0078D7;
+} */
+
+/* .weather-wrapper{
+
+  width: 200px;
+  height: 250px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+ 
+} */
+
+/* .cont-weather-api{
+  display: flex;
+} */
+
+/* .open-weather{
+  width: 45rem;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background: #0078D7;
+  border-bottom: 1px solid white;
+} */
+
+/* .cont-weather-api{
+  display: none;
+  
+} */
+
+/* .icon-close-weather{
+  color: yellow;
+  display: none;
+  border: 1px solid white;
+  background: #0078D7;
+  width: 1500px;
+  height: 30px;
+} */
